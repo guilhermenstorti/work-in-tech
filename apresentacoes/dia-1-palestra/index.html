@@ -1,0 +1,2158 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dia 1 · Todos os testes passaram, mas o produto falhou</title>
+    <meta name="description" content="Work in Tech 2026 · Palestra · Discovery e métricas de produto para quem constrói software" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!--
+          DIA 1 · PALESTRA (26/10, 19h00–22h30)
+          Fonte do conteúdo: roteiros/roteiro-dia-1-palestra.md e roteiros/anexo-dados-dia-1.md
+          Uma <section> de topo por bloco do roteiro (data-act = rótulo do rodapé).
+          Falas, respostas esperadas e tempos ficam nas notas (tecla S).
+        -->
+
+        <!-- =============================== ABERTURA · 20 min =============================== -->
+        <section data-act="Abertura">
+          <section class="slide--cover" data-chrome="hidden">
+            <p class="eyebrow">Work in Tech 2026 · Dia 1 · Palestra</p>
+            <h1>Todos os testes passaram. O produto falhou.</h1>
+            <p class="subtitle">Discovery e métricas de produto para quem constrói software</p>
+            <div class="meta"><span>Guilherme Storti</span><span>Product Manager · Turbi</span><span>UniCesumar · 26/10</span></div>
+            <aside class="notes">
+              <p>Deixe este slide parado até começar.</p>
+              <p><strong>Tempo:</strong> Abertura, 20 min (19:00–19:20): gancho 2 · identificação 3 · timeline e lições 6 · promessa 3 · combinado 2. Sobram cerca de 4 min para as histórias da plateia.</p>
+              <p><strong>Ordem:</strong> identificação → credibilidade → promessa.</p>
+            </aside>
+          </section>
+
+          <section data-chrome="hidden">
+            <h2>Todos os testes passaram. O produto falhou.</h2>
+            <div class="grid-2">
+              <div class="card">
+                <span class="label">Pipeline · main</span>
+                <ul class="pipeline">
+                  <li>lint <span class="pipeline__status">Passou</span></li>
+                  <li>testes unitários <span class="pipeline__status">Passou</span></li>
+                  <li>testes de integração <span class="pipeline__status">Passou</span></li>
+                  <li>build <span class="pipeline__status">Passou</span></li>
+                  <li>deploy em produção <span class="pipeline__status">Passou</span></li>
+                </ul>
+              </div>
+              <div class="card">
+                <span class="label">Usuários ativos por dia</span>
+                <svg class="diagram" viewBox="0 0 680 420" role="img" aria-label="Gráfico de usuários ativos por dia, parado em zero desde o lançamento">
+                  <line class="chart__grid" x1="64" y1="40" x2="664" y2="40" />
+                  <line class="chart__grid" x1="64" y1="140" x2="664" y2="140" />
+                  <line class="chart__grid" x1="64" y1="240" x2="664" y2="240" />
+                  <line class="chart__axis" x1="64" y1="24" x2="64" y2="340" />
+                  <line class="chart__axis" x1="64" y1="340" x2="664" y2="340" />
+                  <path class="chart__line chart__line--critical" d="M64 337 L664 337" />
+                  <text class="chart__label" x="44" y="348" text-anchor="end">0</text>
+                  <text class="chart__label" x="64" y="392">Lançamento</text>
+                  <text class="chart__label" x="664" y="392" text-anchor="end">+30 dias</text>
+                </svg>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>Mostre o slide e faça uma pausa de 5 segundos antes de falar.</p>
+              <p><strong>Tempo:</strong> 2 min (gancho) · <strong>Próximo:</strong> mãos levantadas.</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">Quem já fez um projeto que funcionava perfeitamente e ninguém usou?</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Levanta a mão quem já fez um projeto que funcionava perfeitamente e ninguém usou."</p>
+              <p>Convide duas ou três pessoas a contar em voz alta: "O que era o projeto? Por que vocês acham que ninguém usou?"</p>
+              <p>Guarde as palavras-chave das histórias: elas voltam no fechamento.</p>
+              <p><strong>Tempo:</strong> 3 min com a próxima pergunta.</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">No último projeto de vocês, o que veio primeiro: a tecnologia ou o problema?</p>
+            <aside class="notes">
+              <p>Pergunta aberta. Não avalie as respostas: faça a próxima pergunta.</p>
+              <p><strong>Próximo:</strong> a timeline, contada pelos erros.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Abertura · Como eu cheguei aqui</p>
+            <h2>Uma carreira contada pelos erros</h2>
+            <div class="timeline" role="list" aria-label="Linha do tempo da carreira de Guilherme Storti">
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Engenharia de Produção</span><span class="timeline__org">UEM</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Dev front-end</span><span class="timeline__org">Echotech</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Dev ERP</span><span class="timeline__org">TecLaser</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Gestão de projetos</span><span class="timeline__org">Grupo Euphoria</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Planejamento estratégico</span><span class="timeline__org">Grupo Euphoria</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">BI</span><span class="timeline__org">Grupo Euphoria</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">MBA Digital Business</span><span class="timeline__org">USP</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Product Owner</span><span class="timeline__org">Accountfy</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Product Manager</span><span class="timeline__org">Accountfy</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Pós em Generative AI</span><span class="timeline__org">MIT</span></div>
+              </div>
+              <div class="timeline__stop" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Product Manager</span><span class="timeline__org">Mogno AI</span></div>
+              </div>
+              <div class="timeline__stop is-current" role="listitem">
+                <span class="timeline__dot"></span><span class="timeline__stem"></span>
+                <div class="timeline__label"><span class="timeline__role">Product Manager</span><span class="timeline__org">Turbi</span></div>
+              </div>
+            </div>
+            <aside class="notes">
+              <p><strong>Fala-guia de entrada:</strong> "Deixa eu contar como eu cheguei aqui. Mas não vou contar pelos acertos. Cada parada dessa linha tem um erro que me ensinou uma pergunta. Essas perguntas são a palestra de hoje."</p>
+              <p>A trilha se desenha sozinha, um marco por vez (cerca de 10 s), e depois fica parada. Ela não se repete se você voltar ao slide.</p>
+              <p><strong>Erros por parada:</strong> Dev (Echotech, TecLaser): "funciona na minha máquina" não é entrega, e entrega não é valor · BI (Grupo Euphoria): dado sem contexto não serve para nada · PO (Accountfy): roadmap sem discovery é achismo · PM (Accountfy): produto sem métrica é esperança · PM (Mogno AI): nada disso funciona sem argumento e alinhamento.</p>
+              <p><strong>Tempo:</strong> 6 min (timeline e lições).</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Abertura · O que cada parada me ensinou</p>
+            <h2>Cada erro virou uma pergunta desta noite</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Parada</th><th>O que aprendi (errando)</th><th>Vira</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Dev · Echotech e TecLaser</td><td>“Funciona na minha máquina” não é entrega, e entrega não é valor</td><td>Abertura</td></tr>
+                <tr class="fragment"><td>BI · Grupo Euphoria</td><td>Dado sem contexto não serve para nada</td><td>Ato 4</td></tr>
+                <tr class="fragment"><td>Product Owner · Accountfy</td><td>Roadmap sem discovery é achismo</td><td>Ato 1</td></tr>
+                <tr class="fragment"><td>Product Manager · Accountfy</td><td>Produto sem métrica é esperança</td><td>Ato 4</td></tr>
+                <tr class="fragment"><td>PM Sênior · Mogno AI</td><td>Nada disso funciona sem argumento e alinhamento</td><td>Ato 5</td></tr>              </tbody>
+            </table>
+            <aside class="notes">
+              <p>Uma linha por vez. Cada lição vira um ato da palestra.</p>
+              <p><strong>Próximo:</strong> a promessa, as três perguntas.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">A promessa desta noite</p>
+            <h2>Três perguntas</h2>
+            <ol class="questions">
+              <li class="fragment fade-up">Qual problema é real?<span class="questions__origin">Product Owner · Accountfy: roadmap sem discovery é achismo</span></li>
+              <li class="fragment fade-up">Como vou saber se funcionou?<span class="questions__origin">BI · Grupo Euphoria e PM · Accountfy: produto sem métrica é esperança</span></li>
+              <li class="fragment fade-up">Como convenço quem decide?<span class="questions__origin">PM Sênior · Mogno AI: nada disso funciona sem argumento e alinhamento</span></li>
+            </ol>
+            <aside class="notes">
+              <p>As três perguntas, cada uma ligada a uma parada da timeline.</p>
+              <p><strong>Fala-guia:</strong> "Até o fim da noite vocês vão saber responder cada uma. Amanhã, vão colocar a mão na massa."</p>
+              <p><strong>Tempo:</strong> 3 min.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Isto é uma conversa, não uma <em>aula</em>.</p>
+            <p class="attribution">Interrompam, discordem, contem as experiências de vocês.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Isto é uma conversa, não uma aula. Interrompam, discordem, contem as experiências de vocês. Perguntas e histórias a qualquer momento, com a mão levantada."</p>
+              <p><strong>Tempo:</strong> 2 min · <strong>Transição:</strong> "Vamos começar pelo erro mais comum de todos, que foi o meu primeiro: começar pela solução."</p>
+            </aside>
+          </section>
+        </section>
+
+        <!-- =============================== ATO 1 · 55 min =============================== -->
+        <section data-act="Ato 1 · Explore o problema">
+          <section class="slide--section" data-chrome="hidden">
+            <span class="section-number">01</span>
+            <h1>Explore o problema, não a solução</h1>
+            <p class="section-question">Qual problema é real?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Ato 1, 55 min (19:20–20:15): 1.1 por que pulamos para a solução (10) · 1.2 software é meio (14) · 1.3 pesquisar sem se enganar (13) · 1.4 caça à gambiarra (3) · 1.5 dar tamanho ao problema (12) · 1.6 hipótese como assert (3).</p>
+              <p><strong>Objetivo:</strong> separar problema de solução, entender software como meio, entrevistar sem viés e dar tamanho a um problema com números.</p>
+            </aside>
+          </section>
+
+          <!-- 1.1 Por que pulamos para a solução (10 min) -->
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">“Vamos fazer um app em React com IA.” Ninguém perguntou: <em>para quem?</em></p>
+            <aside class="notes">
+              <p><strong>Situação:</strong> o projeto que começa com "vamos fazer um app em React com IA" antes de alguém perguntar "para quem?".</p>
+              <p><strong>Tempo:</strong> 1.1, 10 min.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Por que pulamos para a solução</p>
+            <h2>Projetos de faculdade nascem na coluna da direita</h2>
+            <div class="split">
+              <div class="split__col split__col--highlight">
+                <span class="split__label">Espaço do problema</span>
+                <ul>
+                  <li>Quem sofre</li>
+                  <li>Qual dor</li>
+                  <li>Com que frequência</li>
+                </ul>
+              </div>
+              <div class="split__col split__col--muted">
+                <span class="split__label">Espaço da solução</span>
+                <ul>
+                  <li>Tela</li>
+                  <li>Stack</li>
+                  <li>Feature</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>A coluna da esquerda é o que quase ninguém preenche. Projetos de faculdade nascem na coluna da direita.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Por que pulamos para a solução</p>
+            <h2>Começar pela solução não é um defeito</h2>
+            <ul>
+              <li class="fragment fade-up dim-past">A graduação constrói a sua camada técnica</li>
+              <li class="fragment fade-up dim-past">Stack, lógica e arquitetura são a base de um profissional sênior</li>
+              <li class="fragment fade-up dim-past">Na disciplina, o problema chega dado: o exercício é o “como”</li>
+            </ul>
+            <aside class="notes">
+              <p>Por que nascem ali, e por que isso não é um defeito: a graduação existe para construir a sua camada técnica. Stack atual, lógica robusta, arquitetura refinada: isso é necessário e é o que dá base a um profissional sênior.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · O que muda no mercado</p>
+            <h2>No mercado, tudo é investimento</h2>
+            <ul>
+              <li class="fragment fade-up dim-past">Uma sprint de um time pequeno custa dezenas de milhares de reais em salários</li>
+              <li class="fragment fade-up dim-past">A empresa espera retorno</li>
+              <li class="fragment fade-up dim-past">Código excelente no problema errado é investimento perdido</li>
+            </ul>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">A faculdade constrói o seu como. O mercado vai cobrar o seu <em>por quê</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "A faculdade constrói o seu 'como'. O mercado vai cobrar o seu 'por quê'. Quem domina os dois é raro, e é isso que leva alguém a tech lead."</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Um requisito é a resposta para uma pergunta que alguém fez <em>antes</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Um requisito é a resposta para uma pergunta que alguém fez antes. Hoje a gente vai aprender a fazer essa pergunta."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Guardem estas três</p>
+            <h2>“O diretor quer um chat no app.” E agora?</h2>
+            <ol>
+              <li class="fragment fade-up">Qual problema isso resolve?</li>
+              <li class="fragment fade-up">Como sabemos que esse problema existe?</li>
+              <li class="fragment fade-up">Como vamos saber se resolveu?</li>
+            </ol>
+            <aside class="notes">
+              <p><strong>Provocação (introduz o Ato 3):</strong> "E quando a demanda já chega pronta, de cima para baixo: 'o diretor quer um chat no app'?" Não aprofunde ainda.</p>
+              <p><strong>Fala-guia:</strong> "Guardem essas três. Daqui a pouco vamos ver como levar isso para a mesa sem virar o chato da reunião."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Quando eu estava na Mogno AI</p>
+            <h2>A dor não era ter IA</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--erro">Quase erro</span>
+                <span class="case__company">Mogno AI</span>
+                <span class="case__role">PM Sênior</span>
+              </div>
+              <div>
+                <p class="case__story">A gente tinha certeza de que o valor era ter IA. O discovery mostrou que a dor era ter IA dentro do fluxo de trabalho, sem fricção.</p>
+                <p class="case__lesson">Isso mudou o posicionamento inteiro.</p>
+              </div>
+            </div>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "A gente tinha certeza de que o valor era ter IA. O discovery mostrou que a dor era ter IA dentro do fluxo de trabalho, sem fricção. Isso mudou o posicionamento inteiro."</p>
+              <p><strong>Próximo:</strong> 1.2, software é meio, não fim.</p>
+            </aside>
+          </section>
+
+          <!-- 1.2 Software é meio, não fim (14 min) -->
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Ninguém quer o software. A pessoa quer <em>progredir</em> numa situação.</p>
+            <aside class="notes">
+              <p><strong>Conceito:</strong> o software é "contratado" para isso.</p>
+              <p><strong>Fala-guia:</strong> "A gente se apaixona pela lógica, pela arquitetura, pela complexidade do que constrói. Mas se o software não resolve um problema, ou resolve pior do que o usuário já resolve hoje, ele não tem serventia prática. Por mais bonito que seja o código."</p>
+              <p><strong>Tempo:</strong> 1.2, 14 min. Exemplos a seguir: 1 min cada.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Software é meio, não fim</p>
+            <h2>Juicero: apertar com as mãos dava o mesmo resultado</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">O que era tecnicamente · 2016</span>
+                <p>Espremedor de suco conectado ao Wi-Fi, com engenharia sofisticada, vendido a centenas de dólares</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que deu errado</span>
+                <p>Jornalistas mostraram que apertar o saquinho de suco com as mãos dava o mesmo resultado. Resolvia pior que a alternativa</p>
+              </div>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> 1 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Software é meio, não fim</p>
+            <h2>Segway: andar e pedalar já resolviam</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">O que era tecnicamente · 2001</span>
+                <p>Veículo com autoequilíbrio por giroscópios, uma façanha de engenharia</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que deu errado</span>
+                <p>Para trajetos curtos, andar e pedalar já resolviam, mais baratos e sem regras de onde circular. Ficou num nicho (turismo, segurança)</p>
+              </div>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> 1 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Software é meio, não fim</p>
+            <h2>Quibi: vídeo curto as pessoas já tinham de graça</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">O que era tecnicamente · 2020</span>
+                <p>Streaming de vídeos curtos premium, com mais de US$ 1,7 bilhão captados</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que deu errado</span>
+                <p>As pessoas já tinham vídeos curtos de graça em outras plataformas. Fechou em menos de um ano</p>
+              </div>
+            </div>
+            <p class="source">Fonte: The Wall Street Journal, 2020</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 1 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Software é meio, não fim</p>
+            <h2>Google Glass: faltava um trabalho claro no dia a dia</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">O que era tecnicamente · 2013</span>
+                <p>Óculos com tela e câmera, à frente do seu tempo</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que deu errado</span>
+                <p>Não havia um trabalho claro no dia a dia do consumidor, e havia atrito de privacidade. Saiu do varejo e ficou restrito a usos corporativos</p>
+              </div>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> 1 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Software é meio, não fim</p>
+            <h2>O sistema interno perdeu para a planilha</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">O que era · cenário comum</span>
+                <p>Um sistema novo para substituir a planilha do setor</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que deu errado</span>
+                <p>O time continua na planilha, porque ela é mais flexível. A alternativa atual venceu</p>
+              </div>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> 1 min. Pergunte se alguém já viu isso num estágio.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">A engenharia funcionou. Faltou perguntar: isso é melhor do que o que a pessoa <em>já faz hoje</em>?</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Em todos esses casos, a engenharia funcionou. O que faltou foi alguém perguntar: isso é melhor do que o que a pessoa já faz hoje?"</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Case condutor · o mesmo carro, duas contratações</p>
+            <h2>Problemas diferentes geram produtos diferentes</h2>
+            <div class="split">
+              <div class="split__col">
+                <span class="split__label">Trabalho contratado</span>
+                <p>“Chegar a um compromisso sem depender de ninguém”</p>
+                <p class="accent">→ aluguel por hora</p>
+              </div>
+              <div class="split__col">
+                <span class="split__label">Trabalho contratado</span>
+                <p>“Ter um carro sem as dores de comprar”</p>
+                <p class="accent">→ assinatura</p>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>O mesmo carro atende duas contratações. Problemas diferentes geram produtos diferentes.</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">Pensem na última vez que vocês abriram um app de delivery. Por que abriram?</p>
+            <aside class="notes">
+              <p>Ouça 4 ou 5 respostas. O próximo slide agrupa as respostas típicas em "trabalhos".</p>
+              <p><strong>Tempo:</strong> exploração do delivery, 5 min.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · O app de delivery</p>
+            <h2>Cinco trabalhos, cinco produtos diferentes</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Trabalho para o qual o app foi “contratado”</th><th>O que o produto precisa otimizar</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>“Estou com fome e sem tempo”</td><td>Tempo de entrega, botão “pedir de novo”</td></tr>
+                <tr class="fragment"><td>“Está chovendo e não quero sair de casa”</td><td>Frete, acompanhamento do pedido em tempo real</td></tr>
+                <tr class="fragment"><td>“Quero me recompensar depois de uma semana pesada”</td><td>Descoberta: fotos, novidades, avaliações</td></tr>
+                <tr class="fragment"><td>“Preciso alimentar a família gastando pouco”</td><td>Preço: cupons, combos, filtro por valor</td></tr>
+                <tr class="fragment"><td>“Vou pedir para a turma toda”</td><td>Coordenação: pedido em grupo, dividir a conta</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes">
+              <p>Revele uma linha por vez, ligando cada uma às respostas que a sala deu.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Mesma tecnologia, decisões <em>opostas</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Se o time acha que o trabalho é 'comida', melhora o cardápio. Se descobre que é 'não perder tempo', melhora a entrega e o 'pedir de novo'. Mesma tecnologia, decisões opostas."</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O concorrente do app de delivery não é só o outro app. É o <em>miojo</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "E o concorrente do app de delivery não é só o outro app. É o miojo, a marmita, cozinhar."</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">Qual era o “miojo” do último projeto de vocês?</p>
+            <aside class="notes">
+              <p><strong>Pergunta final:</strong> "Qual era o 'miojo' do último projeto de vocês? O que as pessoas já usavam no lugar dele?"</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Quando eu estava na Accountfy</p>
+            <h2>Chatbots que funcionavam e não resolviam</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--erro">Erro herdado</span>
+                <span class="case__company">Accountfy · IA</span>
+                <span class="case__role">Product Manager</span>
+              </div>
+              <div>
+                <p class="case__story">Encontrei chatbots que funcionavam tecnicamente.</p>
+                <p class="case__lesson">O problema não era a IA, era a experiência em volta dela.</p>
+              </div>
+            </div>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Encontrei chatbots que funcionavam tecnicamente. O problema não era a IA, era a experiência em volta dela."</p>
+              <p><strong>Próximo:</strong> 1.3, pesquisar sem se enganar.</p>
+            </aside>
+          </section>
+
+          <!-- 1.3 Pesquisar sem se enganar (13 min) -->
+          <section>
+            <p class="eyebrow">Ato 1 · Pesquisar sem se enganar</p>
+            <h2>Três regras de entrevista</h2>
+            <ol>
+              <li class="fragment fade-up dim-past">Pergunte sobre o passado, não sobre o futuro</li>
+              <li class="fragment fade-up dim-past">Peça a última vez que aconteceu</li>
+              <li class="fragment fade-up dim-past">Fale menos de 20% do tempo</li>
+            </ol>
+            <aside class="notes"><p><strong>Tempo:</strong> 1.3, 13 min (regras 2 · duplas 4 · debrief 5 · escada e case 2).</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">É de graça dizer sim. O passado <em>não mente</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Todo mundo responde 'sim' para 'você usaria?'. É de graça dizer sim. O passado não mente."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Exercício em duplas · 4 min</p>
+            <h2>Reescrevam estas três perguntas</h2>
+            <ol>
+              <li>“Você usaria um app que avisa quando o ônibus atrasa?”</li>
+              <li>“Você acha que estudar com IA ajuda?”</li>
+              <li>“Quanto você pagaria por isso?”</li>
+            </ol>
+            <aside class="notes">
+              <p>Em duplas, com quem estiver ao lado, em voz alta (sem papel). Use o cronômetro da visão do apresentador: 4 min.</p>
+              <p><strong>Debrief (5 min):</strong> 2 ou 3 voluntários leem. Depois mostre as versões, uma pergunta por slide.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Debrief · Pergunta 1 de 3</p>
+            <h2>Hipotética, induz o sim e já embute a solução</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Pergunta ruim</span>
+                <p>“Você usaria um app que avisa quando o ônibus atrasa?”</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">Versões boas</span>
+                <ul class="list--small">
+                  <li class="fragment fade-up">“Me conta a última vez que o ônibus atrasou e isso te atrapalhou. O que aconteceu?”</li>
+                  <li class="fragment fade-up">“Como você descobre hoje se o ônibus está vindo?”</li>
+                  <li class="fragment fade-up">“Quanto tempo antes você sai para compensar?”</li>
+                  <li class="fragment fade-up">“O que você fez da última vez que perdeu um compromisso por isso?”</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes"><p>Ouça primeiro as versões da sala. Só depois revele as daqui.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Debrief · Pergunta 2 de 3</p>
+            <h2>Opinião genérica não revela comportamento</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Pergunta ruim</span>
+                <p>“Você acha que estudar com IA ajuda?”</p>
+                <p class="small">Pede opinião genérica, cabe em sim ou não, não revela comportamento</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">Versões boas</span>
+                <ul class="list--small">
+                  <li class="fragment fade-up">“Qual foi a última vez que você usou IA para estudar? Para qual matéria e o que pediu?”</li>
+                  <li class="fragment fade-up">“O que você fez com a resposta depois?”</li>
+                  <li class="fragment fade-up">“Teve alguma vez que você desistiu de usar? O que aconteceu?”</li>
+                  <li class="fragment fade-up">“Como você estudava esse tipo de conteúdo antes?”</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p class="eyebrow">Debrief · Pergunta 3 de 3</p>
+            <h2>Preço hipotético não vale nada</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Pergunta ruim</span>
+                <p>“Quanto você pagaria por isso?”</p>
+                <p class="small">As pessoas chutam para agradar</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">Versões boas</span>
+                <ul class="list--small">
+                  <li class="fragment fade-up">“Você já pagou por algo para resolver isso? O quê, quanto?”</li>
+                  <li class="fragment fade-up">“Quanto tempo você gasta por semana com esse problema?”</li>
+                  <li class="fragment fade-up">“O que você já tentou e abandonou? Por quê?”</li>
+                  <li class="fragment fade-up">“Se isso sumisse amanhã, o que você faria?”</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Sinal de alerta</p>
+            <h2>Elogio é ruído. Comportamento é sinal.</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Ruído</span>
+                <p>“Que ideia legal!”</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">Sinal</span>
+                <p>Comportamento e compromisso</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Escada de evidência</p>
+            <h2>Nem toda evidência vale o mesmo</h2>
+            <div class="ladder">
+              <div class="ladder__step fragment fade-up">
+                <span class="ladder__level">Degrau 1</span>
+                <span class="ladder__title">Opinião</span>
+              </div>
+              <div class="ladder__step fragment fade-up">
+                <span class="ladder__level">Degrau 2</span>
+                <span class="ladder__title">Relato de comportamento passado</span>
+              </div>
+              <div class="ladder__step fragment fade-up">
+                <span class="ladder__level">Degrau 3</span>
+                <span class="ladder__title">Dado de uso</span>
+              </div>
+              <div class="ladder__step is-current fragment fade-up">
+                <span class="ladder__level">Degrau 4</span>
+                <span class="ladder__title">Compromisso real</span>
+                <span class="ladder__hint">Pagou, se inscreveu, deixou o contato</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Quando eu estava na Accountfy</p>
+            <h2>Fui falar com quem cancelou</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--acerto">Acerto</span>
+                <span class="case__company">Accountfy · FP&amp;A</span>
+                <span class="case__role">Product Owner</span>
+              </div>
+              <div>
+                <p class="case__story">O churn subia e a tentação era falar com quem estava satisfeito. Fui falar com quem cancelou: quem passava dos primeiros 60 dias ficava.</p>
+                <p class="case__lesson">O problema era a entrada no produto.</p>
+              </div>
+            </div>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "O churn subia e a tentação era falar com quem estava satisfeito. Fui falar com quem cancelou. Eles mostraram que quem passava dos primeiros 60 dias ficava. O problema era a entrada no produto."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Quando eu estava na Accountfy</p>
+            <h2>Consertar a entrada mudou o churn</h2>
+            <div class="kpis">
+              <div><span class="kpi__value kpi__value--positive">−85%</span><span class="kpi__label">no tempo de onboarding</span></div>
+              <div><span class="kpi__value kpi__value--positive">−5pp</span><span class="kpi__label">de churn mensal</span></div>
+            </div>
+            <aside class="notes"><p><strong>Próximo:</strong> 1.4, caça à gambiarra.</p></aside>
+          </section>
+
+          <!-- 1.4 Caça à gambiarra (3 min) -->
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">Qual gambiarra vocês usam hoje na faculdade?</p>
+            <p class="muted">Planilha, grupo de WhatsApp, print, alarme?</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 1.4, 3 min.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Toda gambiarra é um problema real que alguém já paga para resolver. É <em>ouro</em> em discovery.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Toda gambiarra é um problema real que alguém já está pagando para resolver, com tempo ou esforço. Gambiarra é ouro em discovery."</p>
+            </aside>
+          </section>
+
+          <!-- 1.5 Métricas de discovery (12 min) -->
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Antes de existir produto, já dá para <em>medir</em> o problema.</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 1.5, 12 min (dimensões 3 · estimativa ao vivo 5 · sinais e frase 4).</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Métricas de discovery</p>
+            <h2>Cinco dimensões dão tamanho ao problema</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Dimensão</th><th>Pergunta</th><th>Fonte rápida</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Alcance</td><td>Quantas pessoas têm o problema?</td><td>Dados públicos, base de clientes, contagem</td></tr>
+                <tr class="fragment"><td>Frequência</td><td>Com que frequência acontece?</td><td>Entrevistas, logs</td></tr>
+                <tr class="fragment"><td>Intensidade</td><td>Quanto custa em tempo, dinheiro ou frustração?</td><td>Entrevistas, observação</td></tr>
+                <tr class="fragment"><td>Alternativa atual</td><td>Como resolvem hoje e quanto custa?</td><td>Entrevistas (a gambiarra)</td></tr>
+                <tr class="fragment"><td>Disposição</td><td>Já gastam algo para resolver?</td><td>Comportamento observado</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Estimativa ao vivo</span>
+            <p class="question">Quantas horas por mês os alunos perdem com ônibus atrasado?</p>
+            <aside class="notes">
+              <p>Monte a conta com números chutados pela plateia: alunos que dependem de ônibus × atrasos por semana × minutos perdidos = horas perdidas por mês.</p>
+              <p>Diga a conta em voz alta. O próximo slide traz um exemplo pronto, caso a sala trave.</p>
+              <p><strong>Tempo:</strong> 5 min.</p>
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Ato 1 · Estimativa ao vivo · exemplo</p>
+            <h2>De reclamação a problema com tamanho</h2>
+            <div class="formula">
+              <div class="formula__term"><span class="formula__value">650</span><span class="formula__label">alunos que dependem de ônibus</span></div>
+              <span class="formula__op">×</span>
+              <div class="formula__term"><span class="formula__value">2</span><span class="formula__label">atrasos por semana</span></div>
+              <span class="formula__op">×</span>
+              <div class="formula__term"><span class="formula__value">15 min</span><span class="formula__label">perdidos por atraso</span></div>
+              <span class="formula__op">×</span>
+              <div class="formula__term"><span class="formula__value">4</span><span class="formula__label">semanas no mês</span></div>
+              <span class="formula__op">=</span>
+              <div class="formula__term formula__term--result"><span class="formula__value">1.300 h</span><span class="formula__label">perdidas por mês</span></div>
+            </div>
+            <aside class="notes">
+              <p>Exemplo ilustrativo: 650 × 2 × 15 min × 4 = 78.000 min = 1.300 horas por mês. Se a sala chutou outros números, fale a conta dela.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">“O ônibus atrasa” é uma reclamação. “1.300 horas perdidas por mês” é um <em>problema</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "'O ônibus atrasa' é uma reclamação. 'Mil e trezentas horas perdidas por mês' é um problema."</p>
+              <p>Introdução ao Ato 3: muitos sinais de discovery já estão nos sistemas que vocês constroem.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Engenharia já mede o problema</p>
+            <h2>Os sistemas que vocês constroem já medem o problema</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Sinal de engenharia</th><th>O que revela sobre o problema</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Taxa de erro ou timeout numa etapa</td><td>Usuários travando ali: alcance e intensidade</td></tr>
+                <tr class="fragment"><td>Buscas sem resultado nos logs</td><td>Demanda não atendida: o que procuram e não encontram</td></tr>
+                <tr class="fragment"><td>Mesma ação repetida em poucos segundos</td><td>Frustração, fluxo confuso</td></tr>
+                <tr class="fragment"><td>Tickets de suporte por categoria</td><td>Frequência e intensidade de cada dor</td></tr>
+                <tr class="fragment"><td>Exportação para planilha ou CSV</td><td>O usuário termina o trabalho fora do produto: uma gambiarra</td></tr>
+                <tr class="fragment"><td>Endpoints ou funcionalidades nunca chamados</td><td>Solução sem problema</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes"><p>Introdução: o Ato 3 aprofunda.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Vocês são as pessoas com mais acesso a esses dados. Isso é <em>poder</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Vocês são as pessoas com mais acesso a esses dados na empresa. Isso é poder em uma discussão de produto."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Frase-problema com número</p>
+            <h2>Uma frase que dá tamanho ao problema</h2>
+            <p class="template"><span class="slot">[Quem]</span> perde <span class="slot">[quanto]</span> <span class="slot">[com que frequência]</span> porque <span class="slot">[causa]</span>. Hoje resolvem com <span class="slot">[alternativa]</span>, que custa <span class="slot">[X]</span>.</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 1 · Quando eu estava no Grupo Euphoria</p>
+            <h2>A inadimplência era só uma sensação</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--acerto">Acerto</span>
+                <span class="case__company">Grupo Euphoria</span>
+                <span class="case__role">Estratégia e BI</span>
+              </div>
+              <div>
+                <p class="case__story">Na pandemia, a inadimplência era uma sensação ruim da diretoria. Quando os dados mostraram onde e quanto ela pesava, deu para agir.</p>
+                <p class="case__lesson">Inadimplência −32,5%.</p>
+              </div>
+            </div>
+            <aside class="notes"><p><strong>Próximo:</strong> 1.6, a hipótese como assert.</p></aside>
+          </section>
+
+          <!-- 1.6 A hipótese como assert (3 min) -->
+          <section>
+            <p class="eyebrow">Ato 1 · A hipótese como assert</p>
+            <h2>Escrevam o assert antes do código</h2>
+            <p class="template">Acreditamos que <span class="slot">[quem]</span> tem <span class="slot">[problema]</span> porque <span class="slot">[evidência]</span>. Saberemos que estamos certos se <span class="slot">[métrica]</span> chegar a <span class="slot">[valor]</span>.</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 1.6, 3 min.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">É o teste unitário do <em>negócio</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "É o teste unitário do negócio. Vocês escrevem o assert antes do código."</p>
+              <p><strong>Transição:</strong> "Agora vocês têm um problema real. A tentação é sair codando a primeira ideia. Vamos segurar mais 20 minutos."</p>
+            </aside>
+          </section>
+        </section>
+
+        <!-- =============================== ATO 2 · 20 min =============================== -->
+        <section data-act="Ato 2 · Explore soluções">
+          <section class="slide--section" data-chrome="hidden">
+            <span class="section-number">02</span>
+            <h1>Explore soluções antes de escolher</h1>
+            <p class="section-question">A primeira solução raramente é a melhor</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Ato 2, 20 min (20:15–20:35): regra e exemplos (6) · cases Accountfy (2) · interação (3) · menor teste (5) · quatro riscos (4).</p>
+              <p>Exemplos: 2 ou 3 por tabela do roteiro. Os de reserva estão no Apêndice (tecla O ou G).</p>
+              <p><strong>Se atrasar:</strong> pule Domino's e a tabela "vocês já sabem construir um menor teste".</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Pelo menos <em>três</em> formas diferentes de resolver antes de escolher uma.</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · A solução óbvia vs. a que resolveu</p>
+            <h2>O problema do elevador era o tédio, não a velocidade</h2>
+            <p class="wide muted">Moradores de um prédio reclamam da demora do elevador</p>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Solução óbvia</span>
+                <p>Trocar por um elevador mais rápido</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que resolveu</span>
+                <p>Espelhos ao lado do elevador; as reclamações caíram</p>
+              </div>
+            </div>
+            <aside class="notes"><p>História clássica da área, contada há décadas. <strong>Tempo:</strong> 1 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · A solução óbvia vs. a que resolveu</p>
+            <h2>Espera parada pesa mais que o tempo total</h2>
+            <p class="wide muted">Aeroporto de Houston: passageiros reclamam da demora das malas</p>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Solução óbvia</span>
+                <p>Mais carregadores. A espera caiu para cerca de 8 minutos e as reclamações continuaram</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que resolveu</span>
+                <p>Afastar o desembarque das esteiras: as pessoas andam mais e ficam menos tempo paradas. As reclamações quase sumiram</p>
+              </div>
+            </div>
+            <p class="source">Fonte: The New York Times, “Why Waiting Is Torture”, 2012</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Se esses times tivessem ido direto para a primeira solução, teriam gastado muito dinheiro para resolver o problema errado."</p>
+              <p>Nenhuma das soluções que funcionaram era mais tecnologia; era entender melhor o problema.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · Do físico ao digital · a espera do elevador</p>
+            <h2>Instagram: a foto subia enquanto você escrevia a legenda</h2>
+            <div class="split">
+              <div class="split__col">
+                <span class="split__label">O que o time fez</span>
+                <p>Começava a enviar a foto em segundo plano enquanto a pessoa ainda escrevia a legenda. Ao tocar em “compartilhar”, parecia instantâneo</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">Leitura para devs</span>
+                <p>Performance percebida também é engenharia: otimizar o momento em que o usuário espera, não só o tempo total</p>
+              </div>
+            </div>
+            <aside class="notes"><p>Depois de cada exemplo físico, o "irmão" em software: é aqui que a plateia de dev se reconhece. Instagram nos primeiros anos.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · Do físico ao digital · informar em vez de acelerar</p>
+            <h2>Domino's: a pizza não ficou mais rápida, a espera ficou visível</h2>
+            <div class="split">
+              <div class="split__col">
+                <span class="split__label">O que o time fez · 2008</span>
+                <p>O Pizza Tracker mostra as etapas do pedido (preparo, forno, saiu para entrega) sem a pizza ficar pronta mais rápido</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">Leitura para devs</span>
+                <p>Virou referência de produto: transparência de status como funcionalidade</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O elevador, o aeroporto e o Instagram resolveram o mesmo problema: a espera. Só um precisou de um <em>engenheiro</em>.</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · Quando eu estava na Accountfy</p>
+            <h2>Escalar com produto, não com pessoas</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--acerto">Acerto</span>
+                <span class="case__company">Accountfy · FP&amp;A</span>
+                <span class="case__role">Product Owner</span>
+              </div>
+              <div>
+                <p class="case__story">Para o onboarding lento, a solução óbvia era mais gente do suporte acompanhando o cliente. A escolhida foi redesenhar a entrada no produto.</p>
+                <p class="case__lesson">Tempo de onboarding −85%.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · Quando eu cheguei na Accountfy</p>
+            <h2>Cada chatbot fazia sentido sozinho</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--erro">Falha herdada</span>
+                <span class="case__company">Accountfy · IA</span>
+                <span class="case__role">Product Manager</span>
+              </div>
+              <div>
+                <p class="case__story">Encontrei vários chatbots, cada um escolhido isoladamente, sem conversar entre si.</p>
+                <p class="case__lesson">Sozinhos faziam sentido; juntos, confundiam o usuário.</p>
+              </div>
+            </div>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Quando cheguei, encontrei vários chatbots, cada um escolhido isoladamente, sem conversar entre si. Cada solução fazia sentido sozinha; juntas, confundiam o usuário."</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">Alunos perdem prazo de entrega de trabalho. Me deem três soluções diferentes.</p>
+            <p class="muted">Só uma pode ser um app.</p>
+            <aside class="notes">
+              <p>Ouça as soluções e devolva com perguntas. Não há gabarito: o objetivo é ver que existem várias formas de resolver.</p>
+              <p><strong>Tempo:</strong> 3 min.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O MVP não é a versão capenga do produto. É o menor <em>experimento</em> que responde a sua pergunta.</p>
+            <aside class="notes"><p><strong>Tempo:</strong> o menor teste, 5 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · O menor teste</p>
+            <h2>Qual a coisa mais barata que testa a hipótese?</h2>
+            <ul class="tags">
+              <li class="fragment fade-up">Protótipo de tela</li>
+              <li class="fragment fade-up">Planilha</li>
+              <li class="fragment fade-up">Um formulário</li>
+              <li class="fragment fade-up">Às vezes, nem é software</li>
+            </ul>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · O menor teste, na prática</p>
+            <h2>Grandes produtos começaram com testes pequenos</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Quem</th><th>Pergunta a testar</th><th>Menor teste</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Zappos (1999)</td><td>As pessoas compram sapato pela internet sem experimentar?</td><td>O fundador fotografou sapatos de lojas locais e publicou num site. Quando alguém comprava, ele ia à loja, comprava e enviava. Nenhum estoque</td></tr>
+                <tr class="fragment"><td>Dropbox (2007–2008)</td><td>As pessoas querem sincronizar arquivos desse jeito?</td><td>Um vídeo mostrando o produto antes de ele estar pronto. A lista de espera saltou de cerca de 5 mil para 75 mil pessoas</td></tr>
+                <tr class="fragment"><td>Burbn, que virou Instagram (2010)</td><td>Qual parte do app as pessoas realmente usam?</td><td>Os dados de uso mostraram que só o compartilhamento de fotos importava. O time cortou todo o resto</td></tr>
+              </tbody>
+            </table>
+            <p class="source">Dropbox: relato de Drew Houston, fundador</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Repare no Instagram: a melhor solução foi tirar funcionalidades. Remover também é solução."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · O menor teste no dia a dia de quem desenvolve</p>
+            <h2>Vocês já sabem construir um menor teste</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Técnica</th><th>Como funciona</th><th>Case real</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Porta pintada (fake door)<br /><span class="dim">parente do Dropbox</span></td><td>Um botão para uma funcionalidade que ainda não existe. Ao clicar, aparece “em breve” e o clique é medido</td><td>Buffer (2010): uma página com planos e preços antes do produto existir. Quem clicava em “planos” via que ainda não estava pronto e deixava o e-mail</td></tr>
+                <tr class="fragment"><td>Mágico de Oz (concierge)<br /><span class="dim">parente da Zappos</span></td><td>A interface parece automática, mas uma pessoa faz o trabalho nos bastidores</td><td>A própria Zappos: o “sistema” de estoque era o fundador indo à loja</td></tr>
+                <tr class="fragment"><td>Análise de uso antes de construir mais<br /><span class="dim">parente do Instagram</span></td><td>Uma consulta mostra quais funcionalidades as pessoas realmente usam</td><td>Accountfy AI: dados de uso guiaram a consolidação dos chatbots</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Vocês já sabem fazer tudo isso: um botão, um evento, uma flag, uma consulta. A diferença é usar essas ferramentas para aprender antes de construir, e não só para entregar."</p>
+              <p>Reservas no Apêndice: spike técnico com prazo (Mogno) e feature flag para uma fatia.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · Os quatro riscos de qualquer solução</p>
+            <h2>Uma boa solução passa nos quatro riscos</h2>
+            <div class="grid-2x2">
+              <div class="card fragment fade-up"><span class="label">Risco 1</span><h3>Vão usar?</h3></div>
+              <div class="card fragment fade-up"><span class="label">Risco 2</span><h3>Conseguem usar?</h3></div>
+              <div class="card fragment fade-up"><span class="label">Risco 3</span><h3>Dá para construir?</h3></div>
+              <div class="card fragment fade-up"><span class="label">Risco 4</span><h3>Vale a pena para o negócio?</h3></div>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> quatro riscos, 4 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · Um exemplo para cada risco</p>
+            <h2>O usuário amar não basta</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Risco</th><th>Exemplo</th><th>O que aconteceu</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Vão usar?</td><td>Amazon Fire Phone (2014)</td><td>Tela com efeito 3D sofisticado. Vendeu pouco e a empresa registrou uma baixa contábil de cerca de US$ 170 milhões</td></tr>
+                <tr class="fragment"><td>Conseguem usar?</td><td>Google Wave (2009)</td><td>Colaboração em tempo real impressionante, mas as pessoas não entendiam para que servia. O desenvolvimento foi encerrado em 2010</td></tr>
+                <tr class="fragment"><td>Dá para construir?</td><td>Mogno AI</td><td>Dois testes de poucas horas decidiram entre duas arquiteturas antes de investir semanas</td></tr>
+                <tr class="fragment"><td>Vale a pena para o negócio?</td><td>MoviePass (2017–2019)</td><td>Cinema ilimitado por cerca de US$ 10 por mês. Os usuários amaram, mas cada sessão custava à empresa mais que a mensalidade. A empresa quebrou</td></tr>
+              </tbody>
+            </table>
+            <p class="source">Fire Phone: resultado da Amazon no 3º trimestre de 2014</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "O MoviePass é o lembrete mais caro: o usuário amar não basta. A solução precisa passar nos quatro riscos."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 2 · O que o time técnico poderia ter sinalizado</p>
+            <h2>A resposta estava numa pergunta ou numa consulta</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Caso</th><th>O sinal</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Fire Phone · vão usar?</td><td>“Que tarefa do dia a dia o efeito 3D torna mais fácil?” Uma pergunta de problema, não de tecnologia</td></tr>
+                <tr class="fragment"><td>Google Wave · conseguem usar?</td><td>Liberado por convites, muita gente entrava e não tinha com quem colaborar. Um teste com grupos reais, que já trabalham juntos, teria mostrado isso cedo</td></tr>
+                <tr class="fragment"><td>MoviePass · vale a pena?</td><td>Uma consulta cruzando frequência de idas ao cinema com o custo de cada ingresso mostraria que os usuários mais engajados eram os que mais davam prejuízo</td></tr>
+                <tr class="fragment"><td>Mogno · dá para construir?</td><td>Foi exatamente o papel do teste técnico de poucas horas</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">A resposta estava numa pergunta simples ou numa consulta nos dados. Quem tem acesso a isso? <em>Vocês</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Em três desses quatro casos, a resposta estava numa pergunta simples ou numa consulta nos dados. Quem tem acesso a isso? Vocês."</p>
+              <p><strong>Transição:</strong> "Quem responde o risco 'dá para construir?'. Vocês. É aqui que o dev entra no jogo."</p>
+            </aside>
+          </section>
+        </section>
+
+        <!-- =============================== ATO 3 · 30 min =============================== -->
+        <section data-act="Ato 3 · O dev no discovery">
+          <section class="slide--section" data-chrome="hidden">
+            <span class="section-number">03</span>
+            <h1>Onde o dev entra no discovery</h1>
+            <p class="section-question">Qual problema isso resolve?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Ato 3, 30 min (20:35–21:05): 3.1 por que o dev (5) · 3.2 demanda de cima para baixo (10) · 3.3 detetive de dados (6) · 3.4 engenharia como fonte (5) · 3.5 sem time de produto (4).</p>
+              <p><strong>Objetivo:</strong> questionar uma demanda sem travar o time, usar dados de engenharia como evidência e conduzir o discovery quando não há time de produto.</p>
+            </aside>
+          </section>
+
+          <!-- 3.1 Por que o dev precisa estar no discovery (5 min) -->
+          <section>
+            <p class="eyebrow">Ato 3 · Por que o dev precisa estar no discovery</p>
+            <h2>Quem constrói enxerga o que ninguém vê</h2>
+            <ul>
+              <li class="fragment fade-up dim-past">Restrições e possibilidades que ninguém mais vê</li>
+              <li class="fragment fade-up dim-past">Acesso a dados (logs, banco) que respondem perguntas de discovery</li>
+              <li class="fragment fade-up dim-past">Times maduros trabalham em trio: produto, design e engenharia</li>
+            </ul>
+            <aside class="notes"><p><strong>Tempo:</strong> 3.1, 5 min.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O dev que pergunta “qual problema isso resolve?” é chamado para a conversa <em>antes</em> de a tarefa existir.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "O dev que só recebe tarefa fica sempre no fim da fila das decisões. O dev que pergunta 'qual problema isso resolve?' é chamado para a conversa antes de a tarefa existir."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · Quando quem constrói enxergou o que ninguém via</p>
+            <h2>Gmail e Slack nasceram de quem construía</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Caso</th><th>O que aconteceu</th><th>Lição</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Gmail (2004)</td><td>Começou como projeto de um engenheiro do Google, Paul Buchheit. Com 1 GB de espaço e busca rápida, quando os concorrentes ofereciam poucos megabytes, mudou a pergunta de “como organizar e apagar e-mails” para “nunca apague, procure”</td><td>Uma possibilidade técnica virou proposta de valor</td></tr>
+                <tr class="fragment"><td>Slack (2013)</td><td>O time fazia um jogo online, o Glitch, que não deu certo. A ferramenta interna que os próprios devs criaram para se comunicar virou o produto</td><td>Os devs eram os primeiros usuários da dor, e perceberam</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes"><p>Gmail: uma possibilidade técnica virou proposta de valor, e não só isso: benchmarking de mercado.</p></aside>
+          </section>
+
+          <!-- 3.2 Quando a demanda chega pronta (10 min) -->
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="eyebrow">A demanda chegou pronta</p>
+            <p class="statement">“O diretor quer um chat dentro do app até o fim do <em>mês</em>.”</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 3.2, 10 min.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Questionar não é recusar. É <em>proteger</em> o investimento da empresa e o tempo do time.</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · Quando a demanda chega pronta</p>
+            <h2>Três atitudes para questionar sem travar o time</h2>
+            <ol>
+              <li class="fragment fade-up dim-past">Curiosidade em vez de oposição</li>
+              <li class="fragment fade-up dim-past">Pergunta antes de opinião</li>
+              <li class="fragment fade-up dim-past">Alternativa junto com a dúvida</li>
+            </ol>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · Banco de perguntas</p>
+            <h2>Perguntas para levar à mesa</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Sobre</th><th>Perguntas</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>O problema</td><td>“Qual problema isso resolve? Para quem?” · “O que acontece hoje se não fizermos nada?” · “Como o usuário resolve esse problema hoje?”</td></tr>
+                <tr class="fragment"><td>A evidência</td><td>“Como sabemos que esse problema existe?” · “Quantos usuários são afetados?” · “Temos dado, ticket ou entrevista sobre isso?”</td></tr>
+                <tr class="fragment"><td>O sucesso</td><td>“Como vamos saber, em um mês, que funcionou?” · “Qual número precisa mudar?”</td></tr>
+                <tr class="fragment"><td>A alternativa</td><td>“Existe uma versão menor que testa isso em dias, não semanas?” · “Isso já é resolvido de outro jeito, dentro ou fora do produto?”</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · Modelo de fala</p>
+            <h2>Como levar a dúvida para a mesa</h2>
+            <p class="template">Quero entender melhor para construir a coisa certa. Olhei os dados e vi <span class="slot">[X]</span>. Faz sentido testarmos <span class="slot">[versão menor]</span> e medir <span class="slot">[Y]</span> antes de investir <span class="slot">[Z semanas]</span>?</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · O que evitar</p>
+            <h2>Três jeitos de travar a conversa</h2>
+            <ul>
+              <li class="fragment fade-up dim-past">“Isso não faz sentido”</li>
+              <li class="fragment fade-up dim-past">“Quem pediu isso?”</li>
+              <li class="fragment fade-up dim-past">Estimar o esforço sem perguntar o porquê</li>
+            </ul>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · Pedidos clássicos</p>
+            <h2>O pedido é uma pista, não a especificação</h2>
+            <table class="data">
+              <thead>
+                <tr><th>O pedido</th><th>A pergunta que revela</th><th>O problema real mais comum</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>“Exportar para Excel”</td><td>“O que você faz com a planilha depois?”</td><td>Um relatório ou cálculo que o produto não entrega</td></tr>
+                <tr class="fragment"><td>“Mais filtros na busca”</td><td>“O que você procurava da última vez e não achou?”</td><td>A busca não entende o que a pessoa digita</td></tr>
+                <tr class="fragment"><td>“Um aplicativo” (quando já existe o site)</td><td>“O que você tenta fazer pelo celular e não consegue?”</td><td>Uma única tarefa que não funciona bem no navegador do celular</td></tr>
+                <tr class="fragment"><td>“Notificação por e-mail de tudo”</td><td>“O que acontece quando você perde esse aviso?”</td><td>Medo de perder um prazo específico; um aviso só resolve</td></tr>
+                <tr class="fragment"><td>“Um dashboard”</td><td>“Que decisão você vai tomar olhando para ele?”</td><td>Uma pergunta só, que um número ou alerta responde</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Trate o pedido como um <em>bug report</em>: o usuário descreve o sintoma, vocês investigam a causa.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "O pedido é uma pista, não a especificação. Trate como um bug report: o usuário descreve o sintoma, vocês investigam a causa."</p>
+            </aside>
+          </section>
+
+          <!-- 3.3 Detetive de dados (6 min) -->
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Ato 3 · Detetive de dados · case condutor</p>
+            <h2>A demanda</h2>
+            <div class="message">
+              <div class="message__meta"><span>De: diretoria</span><span>Assunto: chat no app</span></div>
+              <p class="message__body">O diretor quer um chat dentro do app até o fim do mês. O concorrente lançou um.</p>
+            </div>
+            <aside class="notes">
+              <p>Mostre na prática que a resposta para "qual problema isso resolve?" muitas vezes está a duas consultas de distância. Todos os dados são fictícios.</p>
+              <p><strong>Tempo:</strong> 3.3, 6 min (demanda 0,5 · rodada 1: 1 · rodada 2: 2 · rodada 3: 2 · debrief 0,5).</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Rodada 1 · Pergunta para a sala</span>
+            <p class="question">Antes de estimar, o que vocês investigariam?</p>
+            <aside class="notes"><p>Ouça as sugestões. Se a conversa travar, mostre os quatro caminhos (próximo slide).</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Rodada 1 · O que consultar primeiro?</p>
+            <h2>Quatro caminhos possíveis</h2>
+            <ol>
+              <li class="fragment fade-up">Quantas semanas o chat leva para ficar pronto</li>
+              <li class="fragment fade-up">Qual biblioteca de chat usar</li>
+              <li class="fragment fade-up">Por que os usuários procuram o suporte hoje</li>
+              <li class="fragment fade-up">Quantos usuários o concorrente tem</li>
+            </ol>
+            <aside class="notes"><p>Conduza a conversa até a opção 3. Se alguém defender outra, ótimo: peça o argumento, debata brevemente com a sala e siga com a 3.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Rodada 2 · A primeira consulta</p>
+            <h2>Por que os usuários procuram o suporte hoje?</h2>
+            <pre><code class="language-sql" data-trim>
+SELECT motivo, COUNT(*) AS chamados
+FROM chamados_suporte
+WHERE criado_em &gt;= '2026-09-01'
+GROUP BY motivo
+ORDER BY chamados DESC;
+            </code></pre>
+            <aside class="notes"><p><strong>Tempo:</strong> rodada 2, 2 min com o resultado.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Rodada 2 · O resultado</p>
+            <h2>O que esse resultado diz sobre o chat?</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Motivo do chamado</th><th class="num">Chamados</th><th class="num">%</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment custom mark"><td>Status da reserva</td><td class="num">1.240</td><td class="num">31%<span class="bar" style="width: 31%"></span></td></tr>
+                <tr><td>Cobrança ou estorno</td><td class="num">880</td><td class="num">22%<span class="bar" style="width: 22%"></span></td></tr>
+                <tr><td>Carro sujo ou com dano</td><td class="num">720</td><td class="num">18%<span class="bar" style="width: 18%"></span></td></tr>
+                <tr><td>Dificuldade para abrir o carro</td><td class="num">600</td><td class="num">15%<span class="bar" style="width: 15%"></span></td></tr>
+                <tr><td>Cadastro e CNH</td><td class="num">360</td><td class="num">9%<span class="bar" style="width: 9%"></span></td></tr>
+                <tr><td>Outros</td><td class="num">200</td><td class="num">5%<span class="bar" style="width: 5%"></span></td></tr>
+              </tbody>
+            </table>
+            <aside class="notes">
+              <p>Pergunte à plateia e ouça duas ou três respostas. Só depois avance: a linha "Status da reserva" ganha destaque.</p>
+              <p><strong>Leitura:</strong> quase um terço das pessoas procura o suporte para saber algo que o próprio sistema já sabe.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Quase um terço procura o suporte para saber algo que o sistema <em>já sabe</em>.</p>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Rodada 3 · Cruzando chamados de status com os eventos da reserva</p>
+            <h2>Quando o contato sobre status acontece?</h2>
+            <div class="grid-60-40">
+              <table class="data">
+                <thead>
+                  <tr><th>Quando o contato acontece</th><th class="num">Chamados</th><th class="num">%</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="fragment custom mark"><td>Até 10 minutos depois de reservar</td><td class="num">868</td><td class="num">70%</td></tr>
+                  <tr><td>Entre 10 minutos e 1 hora</td><td class="num">248</td><td class="num">20%</td></tr>
+                  <tr><td>Depois de 1 hora</td><td class="num">124</td><td class="num">10%</td></tr>
+                </tbody>
+              </table>
+              <table class="data">
+                <thead>
+                  <tr><th>Grupo</th><th class="num">Cancelamento</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Reservas sem contato com o suporte</td><td class="num">6%</td></tr>
+                  <tr class="fragment custom mark"><td>Reservas com contato sobre status</td><td class="num">12%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> rodada 3, 2 min. Deixe a sala ler antes de destacar.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">A dor real é a incerteza logo depois de reservar. E ela <em>dobra</em> o cancelamento.</p>
+            <aside class="notes"><p><strong>Leitura:</strong> a dor real é a incerteza logo depois de reservar ("deu certo? onde está o carro?"), e ela dobra o cancelamento.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Ato 3 · Detetive de dados</p>
+            <h2>A solução que os dados sugerem</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Chat</span>
+                <p>Uma pessoa respondendo o que o sistema já sabe</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">Confirmação imediata e tela de status</span>
+                <p>Feitas em dias</p>
+              </div>
+            </div>
+            <p class="callout mt-5 fragment fade-up">O dado não mata o chat: mostra por onde começar. Cobrança e estorno (22%) talvez precisem mesmo de atendimento humano.</p>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">A demanda chegou como “chat” e saiu como “incerteza depois da reserva”, <em>com número</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Ninguém aqui precisou de pesquisa de mercado. Foram duas consultas num banco que vocês mesmos modelariam. É isso que um dev traz para a mesa: a demanda chegou como 'chat', e saiu como 'incerteza depois da reserva', com número."</p>
+            </aside>
+          </section>
+
+          <!-- 3.4 A engenharia como fonte de discovery (5 min) -->
+          <section>
+            <p class="eyebrow">Ato 3 · A engenharia como fonte de discovery</p>
+            <h2>Quatro jeitos de o dev ajudar no discovery</h2>
+            <ol>
+              <li class="fragment fade-up dim-past">Uma consulta no banco dimensiona o problema</li>
+              <li class="fragment fade-up dim-past">Os logs mostram onde as pessoas travam</li>
+              <li class="fragment fade-up dim-past">Um evento instrumentado antes da feature responde uma pergunta</li>
+              <li class="fragment fade-up dim-past">Um teste técnico barato evita uma decisão cara</li>
+            </ol>
+            <aside class="notes">
+              <p>Retome a tabela de sinais do Ato 1.5. Exemplo do case condutor: é exatamente o que a plateia acabou de fazer no detetive de dados.</p>
+              <p><strong>Tempo:</strong> 3.4, 5 min.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · Quando eu estava na Mogno AI</p>
+            <h2>Dois testes de horas no lugar de dias de debate</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--acerto">Acerto</span>
+                <span class="case__company">Mogno AI</span>
+                <span class="case__role">PM Sênior</span>
+              </div>
+              <div>
+                <p class="case__story">Duas abordagens de arquitetura para um componente crítico. Em vez de debater por dias, dois testes de poucas horas, com critério de sucesso definido antes.</p>
+                <p class="case__lesson">Resultado inequívoco, semanas de retrabalho economizadas.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · Exemplo não óbvio</p>
+            <h2>Office 2007: o recurso existia, ninguém encontrava</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">A demanda</span>
+                <p>Mais funcionalidades</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que a telemetria mostrou</span>
+                <p>A grande maioria dos pedidos era de funcionalidades que já existiam. A resposta foi redesenhar a interface: a faixa de opções</p>
+              </div>
+            </div>
+            <p class="source">Fonte: Jensen Harris, time de interface do Office (Microsoft)</p>
+            <aside class="notes"><p>O problema não era falta de recurso, era encontrá-lo. Dado de engenharia mudou a pergunta do produto.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Às vezes o melhor código é o que vocês não precisam <em>escrever</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Antes de construir a funcionalidade pedida, vale uma consulta: ela já existe? Quem usa? Às vezes o melhor código é o que vocês não precisam escrever."</p>
+            </aside>
+          </section>
+
+          <!-- 3.5 Quando não existe time de produto (4 min) -->
+          <section>
+            <p class="eyebrow">Ato 3 · Quando não existe time de produto</p>
+            <h2>Sem time de produto, o discovery é seu</h2>
+            <ul class="tags">
+              <li>Startup early-stage</li>
+              <li>Estágio</li>
+              <li>Freela</li>
+              <li>Projeto pessoal</li>
+              <li>TCC</li>
+              <li>Hackathon</li>
+            </ul>
+            <ul class="mt-6">
+              <li class="fragment fade-up dim-past">O briefing é ponto de partida, não o problema</li>
+              <li class="fragment fade-up dim-past">Os usuários costumam estar perto: converse com cinco antes de codar</li>
+              <li class="fragment fade-up dim-past">Reserve tempo de entendimento antes de abrir o editor</li>
+            </ul>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Vale inclusive para o hackathon desta semana: os primeiros 45 minutos de entendimento valem mais que qualquer linha de código."</p>
+              <p><strong>Tempo:</strong> 3.5, 4 min.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · Exemplos sem time de produto</p>
+            <h2>Observar de perto vale mais que adivinhar de longe</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Caso</th><th>O que fizeram</th><th>Lição</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Airbnb (2009)</td><td>Os anúncios em Nova York quase não eram reservados. Os fundadores suspeitaram das fotos ruins, foram pessoalmente fotografar os imóveis, e a receita na cidade dobrou, segundo relatos dos próprios fundadores</td><td>Observar de perto vale mais que adivinhar de longe</td></tr>
+                <tr class="fragment"><td>Botão “Curtir” do Facebook</td><td>Nasceu como ideia num hackathon interno, em 2007, e só foi lançado em 2009, depois de muita discussão sobre o problema que resolvia</td><td>Hackathon gera ideia; discovery decide se ela vira produto</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 3 · Checklist</p>
+            <h2>Antes de abrir o editor</h2>
+            <ul class="checklist">
+              <li class="fragment fade-up">Sabemos quem é o usuário?</li>
+              <li class="fragment fade-up">Falamos com pelo menos 5 pessoas?</li>
+              <li class="fragment fade-up">Temos um número que mostra o tamanho do problema?</li>
+              <li class="fragment fade-up">Sabemos como as pessoas resolvem hoje?</li>
+              <li class="fragment fade-up">Escrevemos a hipótese?</li>
+            </ul>
+            <aside class="notes">
+              <p><strong>Transição para o intervalo:</strong> "Voltamos em 15 minutos para provar, com números, que deu certo."</p>
+            </aside>
+          </section>
+        </section>
+
+        <!-- =============================== INTERVALO · 15 min =============================== -->
+        <section data-act="Intervalo">
+          <section class="slide--break" data-chrome="hidden">
+            <p class="eyebrow">Intervalo · voltamos às 21:20</p>
+            <div class="countdown" data-minutes="15"></div>
+            <p class="muted">Para pensar no café: qual métrica do seu último projeto você acompanhou depois de entregar?</p>
+            <aside class="notes">
+              <p>A contagem começa quando este slide aparece. No último minuto o número muda de cor.</p>
+              <p><strong>Tempo:</strong> 15 min (21:05–21:20).</p>
+            </aside>
+          </section>
+        </section>
+
+        <!-- =============================== ATO 4 · 45 min =============================== -->
+        <section data-act="Ato 4 · Como saber se funcionou">
+          <section class="slide--section" data-chrome="hidden">
+            <span class="section-number">04</span>
+            <h1>Como saber se funcionou</h1>
+            <p class="section-question">Como vou saber se funcionou?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Ato 4, 45 min (21:20–22:05): 4.1 três andares (5) · 4.2 árvore de métricas ao vivo (20) · 4.3 ler dados sem se enganar (10) · 4.4 armadilhas (5) · 4.5 métricas no dia a dia (5).</p>
+              <p><strong>Objetivo:</strong> os três andares de métricas, uma árvore de métricas e o que acompanhar no dia a dia.</p>
+            </aside>
+          </section>
+
+          <!-- 4.1 Os três andares de métricas (5 min) -->
+          <section class="slide--statement" data-chrome="hidden">
+            <div class="stack-v">
+              <p class="statement">“A API caiu de 800 ms para 200 ms!”</p>
+              <p class="statement fragment fade-up"><em>“E daí?”</em></p>
+            </div>
+            <aside class="notes">
+              <p><strong>Situação:</strong> o dev comemora "a API caiu de 800ms para 200ms!" e o diretor pergunta "e daí?".</p>
+              <p><strong>Tempo:</strong> 4.1, 5 min.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 4 · Os três andares de métricas</p>
+            <h2>Do servidor ao resultado, em três andares</h2>
+            <div class="floors">
+              <div class="floor fragment fade-up" data-fragment-index="3"><span class="floor__name">Negócio</span><span class="floor__items">Receita · churn · custo por cliente</span></div>
+              <div class="floor fragment fade-up" data-fragment-index="2"><span class="floor__name">Produto</span><span class="floor__items">Ativação · conversão no funil · retenção · adoção de funcionalidade</span></div>
+              <div class="floor fragment fade-up" data-fragment-index="1"><span class="floor__name">Técnico</span><span class="floor__items">Latência · taxa de erro · crash rate · uptime</span></div>
+            </div>
+            <aside class="notes"><p>Revele de baixo para cima: técnico (o que vocês já conhecem), produto, negócio.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Vocês já monitoram o servidor. Métrica de produto é monitorar o <em>valor</em> que chega no usuário.</p>
+          </section>
+
+          <!-- 4.2 A árvore de métricas ao vivo (20 min) · case real do cadastro, sem o nome da empresa -->
+          <section>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Case real · o funil de cadastro</p>
+            <h2>Downloads dispararam: 90 mil por mês</h2>
+            <ul>
+              <li class="fragment fade-up dim-past">Uma atualização recente do app mexeu no fluxo de cadastro</li>
+              <li class="fragment fade-up dim-past">Uma pesquisa com usuários já apontava problemas na conversão</li>
+              <li class="fragment fade-up dim-past">Marketing e growth fizeram os downloads dispararem nas lojas da Apple e do Google</li>
+            </ul>
+            <aside class="notes">
+              <p><strong>Momento 1 · O cenário (3 min).</strong> Só os números do roteiro podem aparecer. Não cite o nome da empresa neste case.</p>
+              <p><strong>Tempo:</strong> 4.2, 20 min (cenário 3 · funil 5 · árvore 8 · o que a engenharia encontrou 4).</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">Downloads subindo muito. Está tudo bem?</p>
+            <aside class="notes"><p>Ouça duas ou três respostas.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Momento 2 · O funil</p>
+            <h2>Do download à primeira reserva</h2>
+            <div class="funnel">
+              <div class="funnel__row"><span>Download</span><div class="funnel__bar" style="width: 100%"></div><span class="funnel__value">90 mil</span></div>
+              <div class="funnel__row"><span>Abriu o app</span><div class="funnel__bar" style="width: 82%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row"><span>Dados pessoais</span><div class="funnel__bar" style="width: 64%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row"><span>Validação da CNH</span><div class="funnel__bar" style="width: 44%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row"><span>Selfie</span><div class="funnel__bar" style="width: 32%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row"><span>Upload de documento</span><div class="funnel__bar" style="width: 22%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row"><span>Cadastro aprovado</span><div class="funnel__bar" style="width: 15%"></div><span class="funnel__value">15%</span></div>
+              <div class="funnel__row"><span>Primeira reserva no mês</span><div class="funnel__bar" style="width: 7%"></div><span class="funnel__value">7%</span></div>
+            </div>
+            <p class="small mt-4">Larguras ilustrativas: as etapas intermediárias aparecem sem números.</p>
+            <aside class="notes"><p><strong>Momento 2 · O funil (5 min).</strong> Só três números na tela: 90 mil downloads, 15% concluem o cadastro, 7% fazem a primeira reserva no mesmo mês.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Momento 2 · O funil</p>
+            <h2>De cada 100 que baixavam o app, 85 desistiam no cadastro</h2>
+            <div class="kpis">
+              <div class="fragment fade-up"><span class="kpi__value">90 mil</span><span class="kpi__label">downloads por mês</span></div>
+              <div class="fragment fade-up"><span class="kpi__value kpi__value--critical">15%</span><span class="kpi__label">concluem o cadastro</span></div>
+              <div class="fragment fade-up"><span class="kpi__value">7%</span><span class="kpi__label">fazem a primeira reserva no mesmo mês</span></div>
+            </div>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 4 · Ativação</p>
+            <h2>Ativação = primeira reserva no mesmo mês</h2>
+            <p class="wide">O momento em que o usuário entende o valor do produto.</p>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">A gente estava pagando para encher um <em>balde furado</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "De cada 100 pessoas que baixaram o app, 85 desistiram no cadastro. A gente estava pagando para encher um balde furado."</p>
+              <p><strong>Próximo:</strong> Momento 3, a árvore (8 min), montada da receita até as causas.</p>
+            </aside>
+          </section>
+
+          <!-- Árvore de métricas em 4 etapas (data-auto-animate): receita → reservas × ticket → funil → causas -->
+          <section data-auto-animate>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Momento 3 · A árvore de métricas</p>
+            <h2>Toda árvore começa no resultado de negócio</h2>
+            <svg class="diagram" viewBox="0 0 1664 560" role="img" aria-label="Árvore de métricas, etapa 1: receita mensal de novos usuários">
+              <text class="tier" data-id="tier-1" x="0" y="22">NEGÓCIO</text>
+              <g class="node" data-id="n-receita"><rect x="0" y="230" width="360" height="170" rx="16" /><text class="node__title" x="24" y="276">Receita mensal</text><text class="node__title" x="24" y="312">de novos usuários</text><text class="node__value" x="24" y="372">≈ R$ 724,5 mil</text></g>
+            </svg>
+            <aside class="notes"><p>Leitura da esquerda (negócio) para a direita (técnico). Comece pela receita das primeiras reservas.</p></aside>
+          </section>
+
+          <section data-auto-animate>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Momento 3 · A árvore de métricas</p>
+            <h2>Receita = primeiras reservas × ticket médio</h2>
+            <svg class="diagram" viewBox="0 0 1664 560" role="img" aria-label="Árvore de métricas, etapa 2: primeiras reservas vezes ticket médio">
+              <text class="tier" data-id="tier-1" x="0" y="22">NEGÓCIO</text>
+              <text class="tier" data-id="tier-2" x="435" y="22">NEGÓCIO · PRODUTO</text>
+              <path class="edge" data-id="e-rec-pr" d="M360 315 C398 315 397 165 435 165" />
+              <path class="edge" data-id="e-rec-ticket" d="M360 315 C398 315 397 465 435 465" />
+              <g class="node" data-id="n-receita"><rect x="0" y="230" width="360" height="170" rx="16" /><text class="node__title" x="24" y="276">Receita mensal</text><text class="node__title" x="24" y="312">de novos usuários</text><text class="node__value" x="24" y="372">≈ R$ 724,5 mil</text></g>
+              <g class="node" data-id="n-pr"><rect x="435" y="100" width="360" height="130" rx="16" /><text class="node__title" x="459" y="146">Primeiras reservas</text><text class="node__value" x="459" y="202">6.300 por mês</text></g>
+              <g class="node" data-id="n-ticket"><rect x="435" y="400" width="360" height="130" rx="16" /><text class="node__title" x="459" y="446">Ticket médio</text><text class="node__value" x="459" y="502">R$ 115</text></g>
+              <text class="op" data-id="op-1" x="615" y="329" text-anchor="middle">×</text>
+            </svg>
+          </section>
+
+          <section data-auto-animate>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Momento 3 · A árvore de métricas</p>
+            <h2>Primeiras reservas = downloads × cadastro × 1ª reserva</h2>
+            <svg class="diagram" viewBox="0 0 1664 560" role="img" aria-label="Árvore de métricas, etapa 3: downloads vezes cadastro concluído vezes primeira reserva">
+              <text class="tier" data-id="tier-1" x="0" y="22">NEGÓCIO</text>
+              <text class="tier" data-id="tier-2" x="435" y="22">NEGÓCIO · PRODUTO</text>
+              <text class="tier" data-id="tier-3" x="869" y="22">PRODUTO</text>
+              <path class="edge" data-id="e-rec-pr" d="M360 315 C398 315 397 165 435 165" />
+              <path class="edge" data-id="e-rec-ticket" d="M360 315 C398 315 397 465 435 465" />
+              <path class="edge" data-id="e-pr-down" d="M795 165 C832 165 832 120 869 120" />
+              <path class="edge" data-id="e-pr-cad" d="M795 165 C832 165 832 290 869 290" />
+              <path class="edge" data-id="e-pr-res" d="M795 165 C832 165 832 475 869 475" />
+              <g class="node" data-id="n-receita"><rect x="0" y="230" width="360" height="170" rx="16" /><text class="node__title" x="24" y="276">Receita mensal</text><text class="node__title" x="24" y="312">de novos usuários</text><text class="node__value" x="24" y="372">≈ R$ 724,5 mil</text></g>
+              <g class="node" data-id="n-pr"><rect x="435" y="100" width="360" height="130" rx="16" /><text class="node__title" x="459" y="146">Primeiras reservas</text><text class="node__value" x="459" y="202">6.300 por mês</text></g>
+              <g class="node" data-id="n-ticket"><rect x="435" y="400" width="360" height="130" rx="16" /><text class="node__title" x="459" y="446">Ticket médio</text><text class="node__value" x="459" y="502">R$ 115</text></g>
+              <g class="node" data-id="n-down"><rect x="869" y="60" width="360" height="120" rx="16" /><text class="node__title" x="893" y="104">Downloads</text><text class="node__value" x="893" y="156">90 mil por mês</text></g>
+              <g class="node" data-id="n-cad"><rect x="869" y="230" width="360" height="120" rx="16" /><text class="node__title" x="893" y="274">Cadastro concluído</text><text class="node__value" x="893" y="326">15% · 13.500</text></g>
+              <g class="node" data-id="n-res"><rect x="869" y="400" width="360" height="150" rx="16" /><text class="node__title" x="893" y="444">1ª reserva no mês</text><text class="node__title" x="893" y="478">de quem cadastrou</text><text class="node__value" x="893" y="530">≈ 47%</text></g>
+              <text class="op" data-id="op-1" x="615" y="329" text-anchor="middle">×</text>
+              <text class="op" data-id="op-2" x="1049" y="219" text-anchor="middle">×</text>
+              <text class="op" data-id="op-3" x="1049" y="389" text-anchor="middle">×</text>
+            </svg>
+          </section>
+
+          <section data-auto-animate>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Momento 3 · A árvore de métricas</p>
+            <h2>85% dos downloads se perdiam no cadastro antes de virar receita</h2>
+            <svg class="diagram" viewBox="0 0 1664 560" role="img" aria-label="Árvore de métricas completa: o caminho destacado vai da receita às etapas de CNH, selfie e upload de documento">
+              <text class="tier" data-id="tier-1" x="0" y="22">NEGÓCIO</text>
+              <text class="tier" data-id="tier-2" x="435" y="22">NEGÓCIO · PRODUTO</text>
+              <text class="tier" data-id="tier-3" x="869" y="22">PRODUTO</text>
+              <text class="tier" data-id="tier-4" x="1304" y="22">CAUSAS</text>
+              <path class="edge is-highlight" data-id="e-rec-pr" d="M360 315 C398 315 397 165 435 165" />
+              <path class="edge" data-id="e-rec-ticket" d="M360 315 C398 315 397 465 435 465" />
+              <path class="edge" data-id="e-pr-down" d="M795 165 C832 165 832 120 869 120" />
+              <path class="edge is-highlight" data-id="e-pr-cad" d="M795 165 C832 165 832 290 869 290" />
+              <path class="edge" data-id="e-pr-res" d="M795 165 C832 165 832 475 869 475" />
+              <path class="edge" data-id="e-down-mkt" d="M1229 120 L1304 120" />
+              <path class="edge is-highlight" data-id="e-cad-cnh" d="M1229 290 C1266 290 1266 210 1304 210" />
+              <path class="edge is-highlight" data-id="e-cad-selfie" d="M1229 290 L1304 290" />
+              <path class="edge is-highlight" data-id="e-cad-up" d="M1229 290 C1266 290 1266 370 1304 370" />
+              <g class="node is-highlight" data-id="n-receita"><rect x="0" y="230" width="360" height="170" rx="16" /><text class="node__title" x="24" y="276">Receita mensal</text><text class="node__title" x="24" y="312">de novos usuários</text><text class="node__value" x="24" y="372">≈ R$ 724,5 mil</text></g>
+              <g class="node is-highlight" data-id="n-pr"><rect x="435" y="100" width="360" height="130" rx="16" /><text class="node__title" x="459" y="146">Primeiras reservas</text><text class="node__value" x="459" y="202">6.300 por mês</text></g>
+              <g class="node" data-id="n-ticket"><rect x="435" y="400" width="360" height="130" rx="16" /><text class="node__title" x="459" y="446">Ticket médio</text><text class="node__value" x="459" y="502">R$ 115</text></g>
+              <g class="node" data-id="n-down"><rect x="869" y="60" width="360" height="120" rx="16" /><text class="node__title" x="893" y="104">Downloads</text><text class="node__value" x="893" y="156">90 mil por mês</text></g>
+              <g class="node is-highlight" data-id="n-cad"><rect x="869" y="230" width="360" height="120" rx="16" /><text class="node__title" x="893" y="274">Cadastro concluído</text><text class="node__value" x="893" y="326">15% · 13.500</text></g>
+              <g class="node" data-id="n-res"><rect x="869" y="400" width="360" height="150" rx="16" /><text class="node__title" x="893" y="444">1ª reserva no mês</text><text class="node__title" x="893" y="478">de quem cadastrou</text><text class="node__value" x="893" y="530">≈ 47%</text></g>
+              <g class="node" data-id="n-mkt"><rect x="1304" y="86" width="360" height="68" rx="16" /><text class="node__text" x="1328" y="130">Marketing e growth</text></g>
+              <g class="node is-highlight" data-id="n-cnh"><rect x="1304" y="176" width="360" height="68" rx="16" /><text class="node__text" x="1328" y="220">Validação da CNH</text></g>
+              <g class="node is-highlight" data-id="n-selfie"><rect x="1304" y="256" width="360" height="68" rx="16" /><text class="node__text" x="1328" y="300">Selfie</text></g>
+              <g class="node is-highlight" data-id="n-up"><rect x="1304" y="336" width="360" height="68" rx="16" /><text class="node__text" x="1328" y="380">Upload de documento</text></g>
+              <text class="caption" data-id="cap-1" x="1304" y="444">Identificadas pela</text>
+              <text class="caption" data-id="cap-2" x="1304" y="478">engenharia</text>
+              <text class="op" data-id="op-1" x="615" y="329" text-anchor="middle">×</text>
+              <text class="op" data-id="op-2" x="1049" y="219" text-anchor="middle">×</text>
+              <text class="op" data-id="op-3" x="1049" y="389" text-anchor="middle">×</text>
+            </svg>
+            <aside class="notes">
+              <p>O caminho destacado mostra o vazamento: etapas complexas do cadastro seguravam a conclusão em 15%, e isso limitava as primeiras reservas e a receita.</p>
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · A árvore em números</p>
+            <h2>13.500 cadastros viravam 6.300 primeiras reservas</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Métrica</th><th class="num">Valor</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Downloads por mês</td><td class="num">90.000</td></tr>
+                <tr class="is-highlight"><td>Concluíram o cadastro (15%)</td><td class="num">13.500</td></tr>
+                <tr><td>Primeira reserva no mês (7% dos downloads)</td><td class="num">6.300</td></tr>
+                <tr><td>Ticket médio</td><td class="num">R$ 115</td></tr>
+                <tr><td>Receita das primeiras reservas</td><td class="num">≈ R$ 724,5 mil por mês</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">Quanto vale cada ponto percentual a mais de conclusão do cadastro?</p>
+            <aside class="notes"><p>Deixe a plateia chutar antes de revelar.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Quanto vale um ponto percentual</p>
+            <h2>+1 ponto no cadastro ≈ R$ 48 mil por mês</h2>
+            <div class="formula">
+              <div class="formula__term"><span class="formula__value">+1 pp</span><span class="formula__label">de conclusão do cadastro</span></div>
+              <span class="formula__op">→</span>
+              <div class="formula__term fragment fade-up"><span class="formula__value">+900</span><span class="formula__label">cadastros por mês</span></div>
+              <span class="formula__op fragment fade-up">→</span>
+              <div class="formula__term fragment fade-up"><span class="formula__value">+420</span><span class="formula__label">primeiras reservas</span></div>
+              <span class="formula__op fragment fade-up">→</span>
+              <div class="formula__term formula__term--result fragment fade-up"><span class="formula__value">≈ R$ 48 mil</span><span class="formula__label">por mês, quase R$ 580 mil por ano</span></div>
+            </div>
+            <p class="muted mt-6 fragment fade-up">Só na primeira reserva.</p>
+            <aside class="notes">
+              <p>+1 ponto percentual = +900 cadastros. Mantida a proporção atual (cerca de 47% de quem conclui faz a primeira reserva), são +420 primeiras reservas, ≈ R$ 48 mil por mês, quase R$ 580 mil por ano. Só na primeira reserva.</p>
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Cenário ilustrativo</p>
+            <h2>E se o cadastro fosse de 15% para 20%?</h2>
+            <div class="formula">
+              <div class="formula__term"><span class="formula__value">15% → 20%</span><span class="formula__label">de conclusão do cadastro</span></div>
+              <span class="formula__op">→</span>
+              <div class="formula__term fragment fade-up"><span class="formula__value">+2.100</span><span class="formula__label">primeiras reservas</span></div>
+              <span class="formula__op fragment fade-up">→</span>
+              <div class="formula__term formula__term--result fragment fade-up"><span class="formula__value">≈ R$ 241 mil</span><span class="formula__label">por mês</span></div>
+            </div>
+            <aside class="notes"><p>Cenário ilustrativo: cerca de 2.100 primeiras reservas a mais, ≈ R$ 241 mil por mês.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--real data-stamp">Case real, números fictícios</span>
+            <p class="eyebrow">Ato 4 · Momento 4 · O que a engenharia encontrou</p>
+            <h2>A engenharia encontrou onde o cadastro travava</h2>
+            <div class="funnel">
+              <div class="funnel__row"><span>Download</span><div class="funnel__bar" style="width: 100%"></div><span class="funnel__value">90 mil</span></div>
+              <div class="funnel__row"><span>Abriu o app</span><div class="funnel__bar" style="width: 82%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row"><span>Dados pessoais</span><div class="funnel__bar" style="width: 64%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row is-drop"><span>Validação da CNH</span><div class="funnel__bar" style="width: 44%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row is-drop"><span>Selfie</span><div class="funnel__bar" style="width: 32%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row is-drop"><span>Upload de documento</span><div class="funnel__bar" style="width: 22%"></div><span class="funnel__value"></span></div>
+              <div class="funnel__row"><span>Cadastro aprovado</span><div class="funnel__bar" style="width: 15%"></div><span class="funnel__value">15%</span></div>
+              <div class="funnel__row"><span>Primeira reserva no mês</span><div class="funnel__bar" style="width: 7%"></div><span class="funnel__value">7%</span></div>
+            </div>
+            <p class="small mt-4">Eventos de cada etapa × versão do app: erro por etapa, retentativas e comparação entre versões.</p>
+            <aside class="notes">
+              <p><strong>Momento 4 (4 min).</strong> Cruzando os eventos de cada etapa com a versão do app, a engenharia identificou etapas de complexidade no cadastro: validação da CNH, selfie e upload de documento.</p>
+              <p>Ligação com o Ato 1.5: erro por etapa, retentativas e comparação entre versões são sinais de engenharia que viram métricas de discovery.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">A pesquisa disse que havia um problema. Os dados de engenharia disseram <em>onde</em>.</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 4 · Lições do case</p>
+            <h2>Quatro lições do cadastro</h2>
+            <div class="grid-2x2">
+              <div class="card fragment fade-up"><h3>Métrica de vaidade</h3><p class="small">Os downloads subiam e pareciam sucesso; a ativação contava outra história.</p></div>
+              <div class="card fragment fade-up"><h3>Topo vs. meio do funil</h3><p class="small">Investir em aquisição sem consertar o cadastro é pagar para encher um balde furado.</p></div>
+              <div class="card fragment fade-up"><h3>Nem toda melhoria sobe na árvore</h3><p class="small">Otimizar a busca de carros não adiantaria se 85% das pessoas nunca chegavam até ela.</p></div>
+              <div class="card fragment fade-up"><h3>Caminho inverso</h3><p class="small">Para aumentar a receita de novos usuários, a maior alavanca não era mais marketing: era o cadastro.</p></div>
+            </div>
+            <aside class="notes">
+              <p>Métrica de vaidade liga com o 4.4. "Nem toda melhoria técnica sobe na árvore: a árvore mostra onde o esforço de engenharia vira resultado." Caminho inverso: "É assim que o dev participa da estratégia."</p>
+              <p><strong>Próximo:</strong> 4.3, ler dados sem se enganar.</p>
+            </aside>
+          </section>
+
+          <!-- 4.3 Ler dados sem se enganar (10 min) · dados do anexo -->
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Ativação é <em>comportamento</em>: “fez a primeira reserva” vale mais que “baixou o app”.</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 4.3, 10 min.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Ato 4 · Funil mensal do app de aluguel por hora</p>
+            <h2>Onde vocês investigariam primeiro?</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Etapa</th><th class="num">Usuários</th><th class="num">Passaram para a próxima</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Abriram o app</td><td class="num">20.000<span class="bar" style="width: 100%"></span></td><td class="num">70%</td></tr>
+                <tr class="fragment custom mark"><td>Buscaram um carro</td><td class="num">14.000<span class="bar" style="width: 70%"></span></td><td class="num">60%</td></tr>
+                <tr><td>Escolheram um carro</td><td class="num">8.400<span class="bar" style="width: 42%"></span></td><td class="num">90%</td></tr>
+                <tr class="fragment custom mark"><td>Pagamento aprovado</td><td class="num">7.560<span class="bar" style="width: 37.8%"></span></td><td class="num">90%</td></tr>
+                <tr><td>Carro aberto pelo app</td><td class="num">6.800<span class="bar" style="width: 34%"></span></td><td class="num">98%</td></tr>
+                <tr><td>Viagem concluída</td><td class="num">6.660<span class="bar" style="width: 33.3%"></span></td><td class="num">—</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes">
+              <p>Leia junto com a plateia, etapa por etapa. Só depois destaque.</p>
+              <p><strong>Leitura esperada:</strong> a maior queda está entre buscar e escolher (40% desistem). Hipóteses: falta de carro perto, preço, tempo de carregamento da busca. A segunda conversa é a abertura do carro: 10% de falha numa etapa em que o cliente já pagou é a pior experiência possível.</p>
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Ato 4 · Lendo o funil</p>
+            <h2>A maior queda: 40% desistem entre buscar e escolher</h2>
+            <span class="label">Hipóteses a investigar</span>
+            <ul class="tags">
+              <li class="fragment fade-up">Falta de carro perto</li>
+              <li class="fragment fade-up">Preço</li>
+              <li class="fragment fade-up">Tempo de carregamento da busca</li>
+            </ul>
+            <p class="callout callout--warning mt-6 fragment fade-up">A segunda conversa: 10% de falha na abertura do carro, numa etapa em que o cliente já pagou.</p>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Ato 4 · Coorte · % que fez nova reserva, por mês de cadastro</p>
+            <h2>A turma de março retém melhor que a de janeiro. O que mudou?</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Mês de cadastro</th><th class="num">Mês 0</th><th class="num">Mês 1</th><th class="num">Mês 2</th><th class="num">Mês 3</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Janeiro</td><td class="num">100%</td><td class="num">38%</td><td class="num">30%</td><td class="num">27%</td></tr>
+                <tr><td>Fevereiro</td><td class="num">100%</td><td class="num">36%</td><td class="num">29%</td><td class="num">26%</td></tr>
+                <tr class="fragment custom mark"><td>Março</td><td class="num">100%</td><td class="num">52%</td><td class="num">44%</td><td class="num">—</td></tr>
+                <tr class="fragment custom mark"><td>Abril</td><td class="num">100%</td><td class="num">54%</td><td class="num">—</td><td class="num">—</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes">
+              <p>Leia uma linha (a vida de uma turma), depois uma coluna (turmas comparadas no mesmo momento).</p>
+              <p><strong>Leitura esperada:</strong> algo mudou em março e a retenção do primeiro mês subiu de ~37% para ~53%.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">A pergunta certa é “o que lançamos em março?”, não “a retenção <em>melhorou</em>”.</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 4 · Quando eu estava na Mogno AI</p>
+            <h2>Funcionalidades que eu achava essenciais</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--erro">Erro</span>
+                <span class="case__company">Mogno AI</span>
+                <span class="case__role">PM Sênior</span>
+              </div>
+              <div>
+                <p class="case__story">Lançamos funcionalidades que eu achava essenciais. Os dados mostraram que quase ninguém usava. Pivotamos. A ativação de 54% só veio porque medimos desde o primeiro dia.</p>
+                <p class="case__lesson">Doeu, mas sem métrica teríamos insistido por meses.</p>
+              </div>
+            </div>
+            <aside class="notes"><p><strong>Próximo:</strong> 4.4, armadilhas.</p></aside>
+          </section>
+
+          <!-- 4.4 Armadilhas (5 min) -->
+          <section>
+            <p class="eyebrow">Ato 4 · Armadilhas</p>
+            <h2>Três armadilhas na leitura de dados</h2>
+            <ol>
+              <li class="fragment fade-up dim-past">Métricas de vaidade: downloads e cadastros</li>
+              <li class="fragment fade-up dim-past">A média que esconde: um grupo indo muito bem mascara outro indo muito mal</li>
+              <li class="fragment fade-up dim-past">Definições diferentes para o mesmo número</li>
+            </ol>
+            <aside class="notes"><p><strong>Tempo:</strong> 4.4, 5 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 4 · Quando eu estava no Grupo Euphoria</p>
+            <h2>Cada departamento tinha a sua “receita”</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--erro">Erro</span>
+                <span class="case__company">Grupo Euphoria</span>
+                <span class="case__role">Estratégia e BI</span>
+              </div>
+              <div>
+                <p class="case__story">“Receita” era uma coisa diferente para cada departamento.</p>
+                <p class="case__lesson">Um número errado em que todo mundo confia é pior que nenhum número.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4.5 Métricas no dia a dia de quem programa (5 min) -->
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Instrumentar é trabalho de <em>engenharia</em>.</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 4.5, 5 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 4 · Plano de eventos · case condutor</p>
+            <h2>Cada evento responde uma pergunta</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Evento</th><th>Quando dispara</th><th>Propriedades</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td><code>reserva_criada</code></td><td>Usuário confirma a reserva</td><td>carro_id, duração, valor</td></tr>
+                <tr class="fragment"><td><code>pagamento_aprovado</code></td><td>Gateway retorna sucesso</td><td>método, valor</td></tr>
+                <tr class="fragment"><td><code>carro_aberto</code></td><td>Comando de abertura confirmado</td><td>tempo_ms, tentativas</td></tr>
+                <tr class="fragment"><td><code>abertura_falhou</code></td><td>Comando sem confirmação</td><td>erro, tentativas</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 4 · Definition of done</p>
+            <h2>O novo “pronto”</h2>
+            <p class="template">Pronto = <span class="slot">funciona</span> + <span class="slot">evento instrumentado</span> + <span class="slot">métrica de sucesso definida</span></p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 4 · Depois do deploy</p>
+            <h2>Depois da entrega, o trabalho continua</h2>
+            <ul>
+              <li class="fragment fade-up dim-past">Acompanhar em D+1, D+7 e D+30</li>
+              <li class="fragment fade-up dim-past">Métrica de proteção: garantir que melhorar X não piorou Y</li>
+            </ul>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 4 · Produto novo, MVP, projeto pessoal, hackathon</p>
+            <h2>Quando ainda não há dados de uso</h2>
+            <ul>
+              <li class="fragment fade-up dim-past">Métricas de discovery que dimensionam o problema</li>
+              <li class="fragment fade-up dim-past">Métrica de sucesso com meta</li>
+              <li class="fragment fade-up dim-past">A árvore ligando a solução ao impacto</li>
+              <li class="fragment fade-up dim-past">Um teste rápido: “5 pessoas usaram o protótipo, 4 concluíram a tarefa”</li>
+            </ul>
+            <aside class="notes"><p><strong>Transição:</strong> "Vocês têm o problema, a solução e os números. Falta convencer alguém."</p></aside>
+          </section>
+        </section>
+
+        <!-- =============================== ATO 5 · 15 min =============================== -->
+        <section data-act="Ato 5 · Defenda a ideia">
+          <section class="slide--section" data-chrome="hidden">
+            <span class="section-number">05</span>
+            <h1>Defenda a ideia</h1>
+            <p class="section-question">Como convenço quem decide?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Ato 5, 15 min (22:05–22:20): situação (2) · três plateias (3) · estrutura do argumento (3) · exemplo ao vivo (4) · storytelling com dados (2), mais o case FP&amp;A.</p>
+              <p><strong>Objetivo:</strong> transformar uma proposta técnica em argumento com dados, como um tech lead faz no dia a dia.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <div class="stack-v">
+              <p class="statement">“Precisamos refatorar o serviço de pagamento.”</p>
+              <p class="statement fragment fade-up"><em>“Agora não, temos outras prioridades.”</em></p>
+            </div>
+            <aside class="notes"><p>"Quem já ouviu isso?" <strong>Tempo:</strong> 2 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 5 · Três plateias</p>
+            <h2>Cada plateia compra uma coisa diferente</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Quem</th><th>O que “compra”</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Liderança e C-level</td><td>Impacto, custo e risco</td></tr>
+                <tr class="fragment"><td>Usuários</td><td>O problema deles, nas palavras deles, resolvido</td></tr>
+                <tr class="fragment"><td>Time técnico e pares</td><td>Viabilidade, esforço e o que se ganha</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes"><p><strong>Tempo:</strong> 3 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 5 · Estrutura do argumento</p>
+            <h2>Do problema ao pedido, em sete passos</h2>
+            <ol class="flow">
+              <li class="fragment fade-up">Problema com número</li>
+              <li class="fragment fade-up">Evidência</li>
+              <li class="fragment fade-up">Proposta mínima</li>
+              <li class="fragment fade-up">Como vamos medir</li>
+              <li class="fragment fade-up">Impacto esperado</li>
+              <li class="fragment fade-up">Custo e risco</li>
+              <li class="fragment fade-up is-highlight">Pedido</li>
+            </ol>
+            <aside class="notes"><p><strong>Tempo:</strong> 3 min.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Ato 5 · Exemplo com a árvore</p>
+            <h2>2% dos pagamentos falham por timeout</h2>
+            <div class="formula">
+              <div class="formula__term"><span class="formula__value">10 mil</span><span class="formula__label">reservas por mês</span></div>
+              <span class="formula__op">×</span>
+              <div class="formula__term"><span class="formula__value">2%</span><span class="formula__label">falham por timeout</span></div>
+              <span class="formula__op">×</span>
+              <div class="formula__term"><span class="formula__value">50%</span><span class="formula__label">desistem</span></div>
+              <span class="formula__op">=</span>
+              <div class="formula__term"><span class="formula__value">100</span><span class="formula__label">reservas perdidas</span></div>
+            </div>
+            <div class="formula fragment fade-up">
+              <div class="formula__term"><span class="formula__value">100</span><span class="formula__label">reservas</span></div>
+              <span class="formula__op">×</span>
+              <div class="formula__term"><span class="formula__value">R$ 115</span><span class="formula__label">cada</span></div>
+              <span class="formula__op">=</span>
+              <div class="formula__term formula__term--result"><span class="formula__value">≈ R$ 11,5 mil</span><span class="formula__label">por mês, quase R$ 140 mil por ano</span></div>
+            </div>
+            <p class="callout mt-6 fragment fade-up">A refatoração leva 3 semanas. Proponho fazer agora e medir a taxa de falha em D+7.</p>
+            <aside class="notes">
+              <p><strong>Fala:</strong> "2% dos pagamentos falham por timeout e metade desses usuários desiste. Em 10 mil reservas por mês, a R$ 115 cada, são 100 reservas e cerca de R$ 11,5 mil por mês, quase R$ 140 mil por ano. A refatoração leva 3 semanas. Proponho fazer agora e medir a taxa de falha em D+7."</p>
+              <p><strong>Tempo:</strong> 4 min.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O argumento não fala de código. Fala de usuário, de dinheiro e de <em>prazo</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "Repare que o argumento não fala de código. Fala de usuário, de dinheiro e de prazo. O código é o que vocês fazem; o argumento é como vocês conseguem fazê-lo."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 5 · Quando eu estava na Accountfy</p>
+            <h2>Os números mudaram a percepção sozinhos</h2>
+            <div class="case">
+              <div class="case__meta">
+                <span class="badge badge--acerto">Acerto</span>
+                <span class="case__company">Accountfy · FP&amp;A</span>
+                <span class="case__role">Product Owner</span>
+              </div>
+              <div>
+                <p class="case__story">O produto era visto como “complementar”. Quando o churn caiu e a adoção subiu, os números mudaram a percepção sozinhos.</p>
+                <p class="case__lesson">O produto virou pilar do portfólio.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ato 5 · Storytelling com dados</p>
+            <h2>Três regras para apresentar números</h2>
+            <ol>
+              <li class="fragment fade-up dim-past">Um número por slide</li>
+              <li class="fragment fade-up dim-past">Sempre compare: antes e depois, ou contra a alternativa</li>
+              <li class="fragment fade-up dim-past">Sempre diga o “e daí?”</li>
+            </ol>
+            <aside class="notes"><p><strong>Tempo:</strong> 2 min.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Reunião de prioridade, entrevista de emprego, defesa do TCC, hackathon: o raciocínio é o <em>mesmo</em>.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia de fechamento do ato:</strong> "O mesmo raciocínio serve para uma reunião de prioridade, uma entrevista de emprego, a defesa do TCC ou a apresentação de um hackathon."</p>
+            </aside>
+          </section>
+        </section>
+
+        <!-- =============================== FECHAMENTO · 10 min =============================== -->
+        <section data-act="Fechamento">
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">De volta à abertura</span>
+            <p class="question">Lembram dos projetos que ninguém usou? Qual das três perguntas teria mudado essa história?</p>
+            <aside class="notes">
+              <p>Retome as palavras-chave das histórias da abertura. Deixe uma ou duas pessoas responderem.</p>
+              <p><strong>Tempo:</strong> Fechamento, 10 min (22:20–22:30): histórias 1 · perguntas e timeline 2 · convite 1 · lição de casa e QR codes · perguntas 6.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Cada pergunta foi um erro meu</p>
+            <h2>Três perguntas</h2>
+            <ol class="questions">
+              <li>Qual problema é real?<span class="questions__origin">Product Owner · Accountfy: roadmap sem discovery é achismo</span></li>
+              <li>Como vou saber se funcionou?<span class="questions__origin">BI · Grupo Euphoria e PM · Accountfy: produto sem métrica é esperança</span></li>
+              <li>Como convenço quem decide?<span class="questions__origin">PM Sênior · Mogno AI: nada disso funciona sem argumento e alinhamento</span></li>
+            </ol>
+            <aside class="notes"><p><strong>Fala-guia:</strong> "Cada uma dessas perguntas foi um erro meu. Vocês podem pular essa parte."</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Amanhã vocês viram o <em>time de desenvolvimento</em> de um app.</p>
+            <aside class="notes">
+              <p><strong>Convite (1 min):</strong> "Amanhã vocês viram o time de desenvolvimento de um app e vamos construir juntos, do zero, a solução para um problema que vocês vivem todo semestre."</p>
+            </aside>
+          </section>
+
+          <section class="slide--cover" data-chrome="hidden">
+            <p class="eyebrow">Amanhã · Dia 2 · Workshop</p>
+            <h1>Campus+</h1>
+            <p class="subtitle">Quando foi a última vez que vocês precisaram ir à secretaria?</p>
+            <aside class="notes"><p>Só o teaser: nome e uma pergunta. Não revele o case.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Lição de casa · opcional</p>
+            <h2>Observem um problema do seu dia a dia</h2>
+            <p class="wide">Conversem com uma pessoa sobre ele usando as três regras de entrevista.</p>
+          </section>
+
+          <section data-chrome="hidden">
+            <p class="eyebrow">Obrigado!</p>
+            <h2>Perguntas?</h2>
+            <div class="qr-grid">
+              <div class="qr">
+                <div class="qr__code qr__code--png"><img src="../../assets/qrcodes/qr-theproductpath.png" alt="QR code para o The Product Path" /></div>
+                <span class="qr__label">The Product Path</span>
+                <span class="qr__hint">onproductpath.substack.com</span>
+              </div>
+              <div class="qr">
+                <div class="qr__code qr__code--png"><img src="../../assets/qrcodes/qr-vinanews.png" alt="QR code para o Vina News" /></div>
+                <span class="qr__label">Vina News</span>
+                <span class="qr__hint">vinanews.com.br</span>
+              </div>
+              <div class="qr">
+                <div class="qr__code qr__code--png"><img src="../../assets/qrcodes/qr-work-in-tech.png" alt="QR code para o repositório com todo o material" /></div>
+                <span class="qr__label">Todo o material</span>
+                <span class="qr__hint">github.com/guilhermenstorti/work-in-tech</span>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>Deixe este slide na tela durante as perguntas da plateia (6 min). O repositório tem os slides e os roteiros dos dois dias.</p>
+              <p><strong>Não avance:</strong> depois deste slide vem o apêndice.</p>
+            </aside>
+          </section>
+        </section>
+
+        <!-- =============================== APÊNDICE (reservas para as perguntas) =============================== -->
+        <section data-act="Apêndice" data-visibility="uncounted">
+          <section class="slide--section" data-chrome="hidden" data-visibility="uncounted">
+            <span class="section-number">+</span>
+            <h1>Apêndice</h1>
+            <p class="section-question">Exemplos de reserva para as perguntas</p>
+          </section>
+
+          <section data-visibility="uncounted">
+            <p class="eyebrow">Apêndice · A solução óbvia vs. a que resolveu</p>
+            <h2>Às vezes resolver é informar, não acelerar</h2>
+            <p class="wide muted">Passageiros reclamam da espera pelo ônibus</p>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Solução óbvia</span>
+                <p>Mais ônibus, caro e lento de implantar</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que resolveu</span>
+                <p>Previsão de chegada em tempo real. Estudos com o app OneBusAway, em Seattle, mostraram espera percebida menor</p>
+              </div>
+            </div>
+          </section>
+
+          <section data-visibility="uncounted">
+            <p class="eyebrow">Apêndice · Case condutor</p>
+            <h2>“Não sei se minha reserva deu certo”</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Solução óbvia</span>
+                <p>Um chat com atendente</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">O que resolveu</span>
+                <p>Tela de status e notificação</p>
+              </div>
+            </div>
+            <aside class="notes"><p>É a mesma dor do detetive de dados do Ato 3.</p></aside>
+          </section>
+
+          <section data-visibility="uncounted">
+            <p class="eyebrow">Apêndice · Do físico ao digital</p>
+            <h2>Mais irmãos digitais do elevador e do aeroporto</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Case real em software</th><th>O que o time fez</th><th>Leitura para devs</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Telas-esqueleto (Facebook, LinkedIn)</td><td>A estrutura da página aparece antes do conteúdo carregar</td><td>O mesmo tempo de carregamento parece menor</td></tr>
+                <tr><td>Interface otimista (botão de curtir)</td><td>A tela reage na hora, antes de o servidor confirmar, e só desfaz se der erro</td><td>Arquitetura decidida para resolver uma percepção, não um gargalo</td></tr>
+                <tr><td>Apps de transporte</td><td>Mostram o carro se aproximando no mapa</td><td>Um evento de localização e um mapa resolvem ansiedade, não tempo</td></tr>
+                <tr><td>Accountfy FP&amp;A</td><td>Em vez de mais gente do suporte no onboarding, redesenhar a entrada no produto. Onboarding −85%</td><td>Escalar com produto, não com pessoas</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-visibility="uncounted">
+            <p class="eyebrow">Apêndice · O menor teste no dia a dia</p>
+            <h2>Mais duas técnicas de menor teste</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Técnica</th><th>Como funciona</th><th>Case real</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Spike técnico com prazo</td><td>Um teste de horas, com critério de sucesso definido antes, decide uma dúvida técnica</td><td>Mogno AI</td></tr>
+                <tr><td>Feature flag para uma fatia</td><td>Libera para uma parte dos usuários e compara com quem não recebeu</td><td>Prática comum em times de produto maduros</td></tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <footer class="deck-footer" aria-hidden="true">
+      <span>Work in Tech 2026</span>
+      <span class="deck-footer__sep"></span>
+      <span class="deck-footer__deck">Dia 1 · Palestra</span>
+      <span class="deck-footer__sep"></span>
+      <span class="deck-footer__act"></span>
+    </footer>
+
+    <script type="module">
+      import { initDeck } from '../../src/js/deck.js';
+      initDeck({ label: 'Dia 1 · Palestra' });
+    </script>
+  </body>
+</html>

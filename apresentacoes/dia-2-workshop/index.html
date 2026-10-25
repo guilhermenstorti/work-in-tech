@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dia 2 · Workshop Campus+</title>
+    <meta name="description" content="Work in Tech 2026 · Workshop · O case Campus+, construído em conjunto com a turma" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!--
+          DIA 2 · WORKSHOP (27/10, 19h00–22h30)
+          Fonte do conteúdo: roteiros/roteiro-dia-2-workshop.md
+          Sem quadro colaborativo: as respostas esperadas do roteiro já estão nos
+          slides e aparecem como fragmentos DEPOIS de cada pergunta à sala.
+          Cada capítulo termina com um slide "Fica no case".
+        -->
+
+        <!-- =============================== ABERTURA · 10 min =============================== -->
+        <section data-act="Abertura">
+          <section class="slide--cover" data-chrome="hidden">
+            <p class="eyebrow">Work in Tech 2026 · Dia 2 · Workshop</p>
+            <h1>Todos os testes passaram. O produto falhou.</h1>
+            <p class="subtitle">Workshop: o case Campus+, construído com a turma</p>
+            <div class="meta"><span>Guilherme Storti</span><span>Product Manager · Turbi</span><span>UniCesumar · 27/10</span></div>
+            <aside class="notes">
+              <p>Deixe este slide parado até começar.</p>
+              <p><strong>Tempo:</strong> Abertura, 10 min (19:00–19:10): retomada 4 · apresentar o case 4 · combinado 2.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ontem: três perguntas</p>
+            <h2>Três perguntas</h2>
+            <ol class="questions">
+              <li class="fragment fade-up">Qual problema é real?<span class="questions__origin">Product Owner · Accountfy: roadmap sem discovery é achismo</span></li>
+              <li class="fragment fade-up">Como vou saber se funcionou?<span class="questions__origin">BI · Grupo Euphoria e PM · Accountfy: produto sem métrica é esperança</span></li>
+              <li class="fragment fade-up">Como convenço quem decide?<span class="questions__origin">PM Sênior · Mogno AI: nada disso funciona sem argumento e alinhamento</span></li>
+            </ol>
+            <aside class="notes">
+              <p><strong>Retomada (4 min):</strong> as três perguntas do Dia 1 e o checklist "antes de abrir o editor". Mesmo slide de ontem.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Ontem: o checklist</p>
+            <h2>Antes de abrir o editor</h2>
+            <ul class="checklist">
+              <li class="fragment fade-up">Sabemos quem é o usuário?</li>
+              <li class="fragment fade-up">Falamos com pelo menos 5 pessoas?</li>
+              <li class="fragment fade-up">Temos um número que mostra o tamanho do problema?</li>
+              <li class="fragment fade-up">Sabemos como as pessoas resolvem hoje?</li>
+              <li class="fragment fade-up">Escrevemos a hipótese?</li>
+            </ul>
+            <aside class="notes"><p>Hoje a gente vai passar por todos esses itens, num case só.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">O case de hoje · Universidade Horizonte</p>
+            <h2>Campus+, o app oficial dos alunos, lançado há um ano</h2>
+            <span class="label">O que o app faz hoje</span>
+            <ul class="tags">
+              <li>Notas</li>
+              <li>Frequência</li>
+              <li>Boletos</li>
+              <li>Carteirinha digital</li>
+              <li>Abertura de requerimentos</li>
+            </ul>
+            <aside class="notes">
+              <p><strong>Apresentar o case (4 min).</strong> A Universidade Horizonte e o Campus+ são fictícios. Todos os números são fictícios.</p>
+              <p><strong>Por que esse case:</strong> todos na sala já usaram um sistema acadêmico e uma secretaria. O discovery ao vivo é real, porque os usuários estão ali.</p>
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">O case de hoje</p>
+            <h2>A ficha do Campus+</h2>
+            <table class="data">
+              <tbody>
+                <tr><td>Alunos ativos</td><td class="num">12.000</td></tr>
+                <tr><td>Downloads do app</td><td class="num">10.500</td></tr>
+                <tr><td>Usuários ativos no mês</td><td class="num">4.200 (35% dos alunos)</td></tr>
+                <tr><td>Secretaria acadêmica (balcão, e-mail e WhatsApp)</td><td class="num">3.000 atendimentos por mês</td></tr>
+                <tr><td>Tempo médio de atendimento</td><td class="num">10 minutos</td></tr>
+                <tr><td>Fila no início do semestre</td><td class="num">Mais de 40 minutos</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Hoje vocês são o <em>time de desenvolvimento</em> do Campus+.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia de abertura:</strong> "Hoje vocês são o time de desenvolvimento do Campus+. Eu sou a reitoria, os dados e, às vezes, o usuário. Ninguém vai ser avaliado: a gente vai construir isso junto."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">O mapa da noite</p>
+            <h2>Sete capítulos, cada um retoma um bloco de ontem</h2>
+            <ol class="chapters">
+              <li><span class="chapters__num">Capítulo 1</span><span class="chapters__name">A demanda chegou</span><span class="chapters__text">Retoma os Atos 1.1, 1.2 e 3.2</span></li>
+              <li><span class="chapters__num">Capítulo 2</span><span class="chapters__name">Discovery ao vivo</span><span class="chapters__text">Retoma os Atos 1.3 e 1.4</span></li>
+              <li><span class="chapters__num">Capítulo 3</span><span class="chapters__name">Detetive de dados</span><span class="chapters__text">Retoma os Atos 3.3 e 3.4</span></li>
+              <li><span class="chapters__num">Capítulo 4</span><span class="chapters__name">O tamanho do problema</span><span class="chapters__text">Retoma os Atos 1.5 e 1.6</span></li>
+              <li><span class="chapters__num">Capítulo 5</span><span class="chapters__name">Explorar soluções</span><span class="chapters__text">Retoma o Ato 2</span></li>
+              <li><span class="chapters__num">Capítulo 6</span><span class="chapters__name">Métricas e árvore</span><span class="chapters__text">Retoma o Ato 4</span></li>
+              <li><span class="chapters__num">Capítulo 7</span><span class="chapters__name">Defender a decisão</span><span class="chapters__text">Retoma o Ato 5</span></li>
+            </ol>
+            <aside class="notes">
+              <p><strong>Ritmo de cada capítulo:</strong> revelo uma carta ou um dado → pergunta aberta → a sala responde e debate → as respostas esperadas aparecem na tela → fecho ligando ao conceito do Dia 1.</p>
+              <p>As respostas esperadas são referência, não gabarito. Se a sala chegar a outra conclusão bem argumentada, siga com ela.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Discordem, contem experiências, defendam <em>ideias</em>.</p>
+            <p class="attribution">Ninguém vai ser avaliado: o case é de vocês.</p>
+            <aside class="notes"><p><strong>Combinado (2 min).</strong> <strong>Próximo:</strong> Capítulo 1.</p></aside>
+          </section>
+        </section>
+
+        <!-- =============================== CAPÍTULO 1 · 25 min =============================== -->
+        <section data-act="Cap. 1 · A demanda chegou">
+          <section class="slide--section" data-chrome="hidden">
+            <p class="eyebrow">Capítulo 1 · retoma os Atos 1.1, 1.2 e 3.2</p>
+            <span class="section-number">01</span>
+            <h1>A demanda chegou</h1>
+            <p class="section-question">Qual problema é real?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Capítulo 1, 25 min (19:10–19:35): primeiro impulso 5 · perguntas à reitoria 10 · trabalhos da secretaria 8 · fechamento 2.</p>
+              <p><strong>Base do Dia 1:</strong> problema vs. solução (1.1), software é meio (1.2), questionar a demanda (3.2).</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Capítulo 1 · O e-mail da reitoria</p>
+            <h2>A demanda</h2>
+            <div class="message">
+              <div class="message__meta"><span>De: reitoria</span><span>Para: time do Campus+</span><span>Assunto: chatbot com IA</span></div>
+              <p class="message__body">Pessoal, todo mundo está colocando IA nos apps. Queremos um chatbot com IA no Campus+ até o início do próximo semestre, para acabar com as filas da secretaria.</p>
+            </div>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 1 · Pergunta para a sala</span>
+            <p class="question">Vocês são o time do Campus+. Qual é a primeira coisa que vocês fariam?</p>
+            <aside class="notes"><p>Deixe surgir tudo: modelo de linguagem, base de conhecimento, stack. <strong>Tempo:</strong> 5 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 1 · O primeiro impulso</p>
+            <h2>Repararam em qual coluna a gente começou?</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Espaço do problema</span>
+                <p class="dim">Ainda vazio</p>
+              </div>
+              <div class="split__col split__col--highlight">
+                <span class="split__label">Espaço da solução</span>
+                <ul>
+                  <li class="fragment fade-up">Modelo de linguagem</li>
+                  <li class="fragment fade-up">Base de conhecimento</li>
+                  <li class="fragment fade-up">Stack</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes"><p>Revele as respostas típicas depois que a sala falar. Então pergunte: "Repararam em qual coluna a gente começou?"</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 2 · Perguntas à reitoria</p>
+            <h2>Usem o banco de perguntas de ontem</h2>
+            <ul class="tags">
+              <li>O problema</li>
+              <li>A evidência</li>
+              <li>O sucesso</li>
+              <li>A alternativa</li>
+            </ul>
+            <aside class="notes">
+              <p>A sala usa o banco de perguntas do Ato 3.2. Cada boa pergunta revela uma carta (próximo slide). Só mostre a carta quando alguém fizer a pergunta que leva a ela.</p>
+              <p><strong>Tempo:</strong> 10 min.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 2 · O que a reitoria responde</p>
+            <h2>Quatro cartas, quatro perguntas</h2>
+            <div class="cards-reveal">
+              <div class="context-card fragment fade-up">
+                <span class="context-card__letter">A</span>
+                <span class="context-card__trigger">“Por que agora?”</span>
+                <p class="context-card__body">O reitor viu um chatbot no app de outra universidade num congresso.</p>
+              </div>
+              <div class="context-card fragment fade-up">
+                <span class="context-card__letter">B</span>
+                <span class="context-card__trigger">“Qual problema isso resolve?”</span>
+                <p class="context-card__body">As filas da secretaria passam de 40 minutos no início do semestre.</p>
+              </div>
+              <div class="context-card fragment fade-up">
+                <span class="context-card__letter">C</span>
+                <span class="context-card__trigger">“Como vamos saber se funcionou?”</span>
+                <p class="context-card__body">Ninguém definiu. O objetivo é “menos fila”.</p>
+              </div>
+              <div class="context-card fragment fade-up">
+                <span class="context-card__letter">D</span>
+                <span class="context-card__trigger">“Temos algum dado?”</span>
+                <p class="context-card__body">A secretaria registra cada atendimento com um motivo. Ninguém nunca olhou.</p>
+              </div>
+            </div>
+            <aside class="notes"><p>As cartas aparecem na ordem A–D. Se a sala fizer as perguntas em outra ordem, avance mesmo assim e diga a qual pergunta a carta responde.</p></aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 3 · Pergunta para a sala</span>
+            <p class="question">Pensem na última vez que vocês foram à secretaria. Foram resolver o quê?</p>
+            <aside class="notes"><p>Colete histórias reais. <strong>Tempo:</strong> 8 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 3 · Para que vocês “contratam” a secretaria</p>
+            <h2>Cinco trabalhos que levam alguém à secretaria</h2>
+            <ul class="tags">
+              <li class="fragment fade-up">Comprovar matrícula para estágio ou passe de transporte</li>
+              <li class="fragment fade-up">Resolver boleto</li>
+              <li class="fragment fade-up">Corrigir nota ou frequência</li>
+              <li class="fragment fade-up">Trancamento ou aproveitamento de disciplina</li>
+              <li class="fragment fade-up">Perguntar o andamento de algo já pedido</li>
+            </ul>
+            <aside class="notes"><p>Respostas esperadas, agrupadas em "trabalhos". Revele uma por vez, ligando às histórias da sala.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O chatbot é uma solução. A fila é um sintoma. A gente ainda não sabe qual é o <em>problema</em>.</p>
+            <aside class="notes"><p><strong>Fechamento (2 min) · Fala-guia.</strong></p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Fica no case · Capítulo 1</p>
+            <h2>A demanda, reescrita como pergunta</h2>
+            <p class="quote">Por que os alunos precisam ir à secretaria, e quais desses motivos o Campus+ poderia resolver?</p>
+          </section>
+        </section>
+
+        <!-- =============================== CAPÍTULO 2 · 30 min =============================== -->
+        <section data-act="Cap. 2 · Discovery ao vivo">
+          <section class="slide--section" data-chrome="hidden">
+            <p class="eyebrow">Capítulo 2 · retoma os Atos 1.3 e 1.4</p>
+            <span class="section-number">02</span>
+            <h1>Discovery ao vivo</h1>
+            <p class="section-question">Qual problema é real?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Capítulo 2, 30 min (19:35–20:05): montar as perguntas 8 · a entrevista 12 · caça à gambiarra 5 · escada de evidência 5.</p>
+              <p><strong>Base do Dia 1:</strong> pesquisar sem se enganar (1.3), caça à gambiarra (1.4).</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Os usuários do Campus+ estão <em>nesta sala</em>.</p>
+            <aside class="notes"><p><strong>Fala-guia de entrada:</strong> "Os usuários do Campus+ estão nesta sala. Vamos entrevistá-los."</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 1 · Montar as perguntas</p>
+            <h2>Passem cada pergunta pelo detector de viés</h2>
+            <ol>
+              <li class="fragment fade-up dim-past">É sobre o passado ou sobre o futuro?</li>
+              <li class="fragment fade-up dim-past">É comportamento ou opinião?</li>
+            </ol>
+            <aside class="notes"><p>A sala sugere perguntas; você aplica o detector em voz alta. <strong>Tempo:</strong> 8 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 1 · Detector de viés</p>
+            <h2>Do futuro para o passado</h2>
+            <div class="split">
+              <div class="split__col split__col--muted">
+                <span class="split__label">Pergunta ruim</span>
+                <p>“Vocês usariam um chatbot da secretaria?”</p>
+              </div>
+              <div class="split__col split__col--highlight fragment fade-up">
+                <span class="split__label">Reescrita</span>
+                <p>“Me conta a última vez que você precisou de algo da secretaria. O que aconteceu?”</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 2 · A entrevista</span>
+            <p class="question">Me conta a última vez que você precisou de algo da secretaria. O que aconteceu?</p>
+            <aside class="notes">
+              <p>Você faz as perguntas boas para a sala. 3 a 5 voluntários respondem de onde estão; depois pergunte "aconteceu com mais alguém?" e deixe outros completarem.</p>
+              <p>Repita em voz alta as frases literais, não interpretações. <strong>Tempo:</strong> 12 min.</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 3 · Caça à gambiarra</span>
+            <p class="question">Como vocês resolvem isso hoje sem passar pela secretaria?</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 5 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 3 · Caça à gambiarra</p>
+            <h2>As gambiarras que a sala conhece</h2>
+            <ul class="tags">
+              <li class="fragment fade-up">Usar o print de uma declaração antiga</li>
+              <li class="fragment fade-up">Pedir a um conhecido que trabalha lá</li>
+              <li class="fragment fade-up">Perguntar no grupo da turma</li>
+              <li class="fragment fade-up">Ir pessoalmente “só para perguntar se ficou pronto”</li>
+              <li class="fragment fade-up">Mandar o mesmo e-mail várias vezes</li>
+            </ul>
+            <aside class="notes"><p>Respostas esperadas. Revele depois que a sala falar.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 4 · Escada de evidência</p>
+            <h2>Ainda faltam os dois degraus de cima</h2>
+            <div class="ladder">
+              <div class="ladder__step">
+                <span class="ladder__level">Degrau 1</span>
+                <span class="ladder__title">Opinião</span>
+              </div>
+              <div class="ladder__step is-current">
+                <span class="ladder__level">Degrau 2 · onde estamos</span>
+                <span class="ladder__title">Relato de comportamento passado</span>
+                <span class="ladder__hint">O que ouvimos hoje</span>
+              </div>
+              <div class="ladder__step is-missing fragment fade-up">
+                <span class="ladder__level">Degrau 3 · falta</span>
+                <span class="ladder__title">Dado de uso</span>
+              </div>
+              <div class="ladder__step is-missing fragment fade-up">
+                <span class="ladder__level">Degrau 4 · falta</span>
+                <span class="ladder__title">Compromisso real</span>
+              </div>
+            </div>
+            <aside class="notes"><p>Classifique o que ouvimos: opinião ou relato de comportamento passado? <strong>Tempo:</strong> 5 min.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">São 30 pessoas numa sala. Isso vale para <em>12 mil</em> alunos?</p>
+            <aside class="notes">
+              <p><strong>Fala-guia de saída:</strong> "Em 20 minutos vocês fizeram mais discovery do que muito projeto faz em um semestre. Mas são 30 pessoas numa sala. Isso vale para 12 mil alunos? Vamos aos dados."</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Fica no case · Capítulo 2</p>
+            <h2>O que ouvimos</h2>
+            <div class="grid-2">
+              <div class="card">
+                <span class="label">Dores mais citadas</span>
+                <ul class="list--small">
+                  <li>Comprovar matrícula para estágio ou passe</li>
+                  <li>Saber o andamento de um pedido</li>
+                  <li>Resolver boleto</li>
+                  <li>Corrigir nota ou frequência</li>
+                </ul>
+              </div>
+              <div class="card">
+                <span class="label">Gambiarras</span>
+                <ul class="list--small">
+                  <li>Print de uma declaração antiga</li>
+                  <li>Um conhecido que trabalha lá</li>
+                  <li>O grupo da turma</li>
+                  <li>Ir “só para perguntar se ficou pronto”</li>
+                  <li>O mesmo e-mail várias vezes</li>
+                </ul>
+              </div>
+            </div>
+            <p class="small mt-5">Nível de evidência: relatos de comportamento passado.</p>
+            <aside class="notes">
+              <p>Ajuste a fala ao que a sala trouxe de verdade. Se a sala trouxer uma dor dominante diferente (por exemplo, boleto), use como contraste no capítulo 3: "vamos ver se os dados confirmam".</p>
+            </aside>
+          </section>
+        </section>
+
+        <!-- =============================== CAPÍTULO 3 · 25 min =============================== -->
+        <section data-act="Cap. 3 · Detetive de dados">
+          <section class="slide--section" data-chrome="hidden">
+            <p class="eyebrow">Capítulo 3 · retoma os Atos 3.3 e 3.4</p>
+            <span class="section-number">03</span>
+            <h1>Detetive de dados</h1>
+            <p class="section-question">Isso vale para 12 mil alunos?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Capítulo 3, 25 min (20:05–20:30): rodada 1: 3 · rodada 2: 7 · rodada 3: 8 · rodada 4: 4 · fechamento 3.</p>
+              <p><strong>Base do Dia 1:</strong> detetive de dados (3.3), a engenharia como fonte de discovery (3.4).</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Rodada 1 · Pergunta para a sala</span>
+            <p class="question">Que dado vocês consultariam primeiro?</p>
+            <aside class="notes"><p>Conduza até "os motivos dos atendimentos", a carta D do capítulo 1. <strong>Tempo:</strong> 3 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Rodada 1 · De volta à carta D</p>
+            <h2>O dado que ninguém olhou</h2>
+            <div class="cards-reveal">
+              <div class="context-card">
+                <span class="context-card__letter">D</span>
+                <span class="context-card__trigger">“Temos algum dado?”</span>
+                <p class="context-card__body">A secretaria registra cada atendimento com um motivo. Ninguém nunca olhou.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Rodada 2 · A primeira consulta</p>
+            <h2>Por que os alunos procuram a secretaria?</h2>
+            <pre><code class="language-sql" data-trim>
+SELECT motivo, COUNT(*) AS atendimentos
+FROM atendimentos_secretaria
+WHERE criado_em &gt;= '2026-09-01'
+GROUP BY motivo
+ORDER BY atendimentos DESC;
+            </code></pre>
+            <aside class="notes"><p><strong>Tempo:</strong> rodada 2, 7 min com o resultado e as perguntas.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Rodada 2 · O resultado</p>
+            <h2>Bate com o que vocês contaram?</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Motivo</th><th class="num">Atendimentos/mês</th><th class="num">%</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment custom mark"><td>Declaração de matrícula</td><td class="num">960</td><td class="num">32%<span class="bar" style="width: 32%"></span></td></tr>
+                <tr class="fragment custom mark"><td>Status de requerimento</td><td class="num">720</td><td class="num">24%<span class="bar" style="width: 24%"></span></td></tr>
+                <tr><td>Boleto e financeiro</td><td class="num">540</td><td class="num">18%<span class="bar" style="width: 18%"></span></td></tr>
+                <tr><td>Notas e frequência</td><td class="num">360</td><td class="num">12%<span class="bar" style="width: 12%"></span></td></tr>
+                <tr><td>Aproveitamento de disciplinas</td><td class="num">240</td><td class="num">8%<span class="bar" style="width: 8%"></span></td></tr>
+                <tr><td>Outros</td><td class="num">180</td><td class="num">6%<span class="bar" style="width: 6%"></span></td></tr>
+              </tbody>
+            </table>
+            <aside class="notes"><p>Deixe a sala comparar com o que contou no capítulo 2. Só depois destaque declaração e status.</p></aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">Em quais desses um chatbot ajudaria? Em quais não?</p>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Rodada 3 · Os pedidos de declaração feitos pelo portal</p>
+            <h2>1.400 pedidos de declaração por mês</h2>
+            <div class="grid-60-40">
+              <table class="data">
+                <thead>
+                  <tr><th>Tempo até ficar pronta</th><th class="num">Pedidos/mês</th><th class="num">Procuraram a secretaria antes</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Até 1 dia</td><td class="num">210 (15%)</td><td class="num">10%</td></tr>
+                  <tr><td>De 1 a 3 dias</td><td class="num">630 (45%)</td><td class="num">45%</td></tr>
+                  <tr class="fragment custom mark"><td>Mais de 3 dias</td><td class="num">560 (40%)</td><td class="num">70%</td></tr>
+                </tbody>
+              </table>
+              <table class="data">
+                <thead>
+                  <tr><th>Para que foi pedida</th><th class="num">%</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="fragment custom mark"><td>Estágio</td><td class="num">55%</td></tr>
+                  <tr><td>Passe de transporte</td><td class="num">25%</td></tr>
+                  <tr><td>Outros</td><td class="num">20%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> rodada 3, 8 min. Uma segunda consulta, sobre os pedidos de declaração feitos pelo portal.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Rodada 3 · A leitura</p>
+            <h2>Metade dos pedidos vira contato com a secretaria</h2>
+            <div class="kpis">
+              <div><span class="kpi__value">1.400</span><span class="kpi__label">pedidos de declaração por mês</span></div>
+              <div class="fragment fade-up"><span class="kpi__value kpi__value--accent">≈ 700</span><span class="kpi__label">viram contato com a secretaria antes da entrega</span></div>
+            </div>
+            <p class="muted mt-6 fragment fade-up">Praticamente todo o motivo “status de requerimento” vem daqui.</p>
+            <aside class="notes"><p><strong>Leitura esperada:</strong> são 1.400 pedidos por mês, e quase 700 viram contato com a secretaria antes da entrega.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O trabalho não é “ter uma declaração”. É <em>não perder a vaga</em> de estágio.</p>
+            <aside class="notes"><p>O "trabalho" real. A empresa costuma pedir para "até sexta".</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Rodada 4 · Um sinal de engenharia</p>
+            <h2>O que isso diz sobre quem está do outro lado da tela?</h2>
+            <div class="cards-reveal">
+              <div class="context-card">
+                <span class="context-card__letter">E</span>
+                <span class="context-card__trigger">Log do portal</span>
+                <p class="context-card__body">A página “Meus requerimentos” recebe em média 6 acessos por pedido de declaração antes de ela ficar pronta.</p>
+              </div>
+              <div class="context-card fragment fade-up">
+                <span class="context-card__trigger">Resposta esperada</span>
+                <p class="context-card__body">Ansiedade e falta de status.</p>
+              </div>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> rodada 4, 4 min. Ouça a sala antes de revelar a resposta esperada.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Mais da metade da fila, <em>56%</em>, é uma declaração que o sistema já tem todos os dados para gerar.</p>
+            <p class="attribution fragment fade-up">Nuance: boleto e notas somam 30%. Ali, talvez, um assistente faça sentido depois.</p>
+            <aside class="notes">
+              <p><strong>Fala-guia:</strong> "A reitoria pediu um chatbot para a fila. Os dados dizem que mais da metade da fila, 56%, é uma declaração que o sistema já tem todos os dados para gerar."</p>
+              <p><strong>Tempo:</strong> fechamento, 3 min.</p>
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Fica no case · Capítulo 3</p>
+            <h2>O que os dados mostraram</h2>
+            <div class="grid-2x2">
+              <div class="card"><h3>56% da fila</h3><p class="small">Declaração de matrícula (32%) e status de requerimento (24%)</p></div>
+              <div class="card"><h3>40% esperam mais de 3 dias</h3><p class="small">E 70% desses procuram a secretaria antes de receber</p></div>
+              <div class="card"><h3>6 acessos por pedido</h3><p class="small">À página “Meus requerimentos”, antes de a declaração ficar pronta</p></div>
+              <div class="card"><h3>O trabalho real</h3><p class="small">Não perder a vaga de estágio (55% dos pedidos)</p></div>
+            </div>
+          </section>
+        </section>
+
+        <!-- =============================== INTERVALO · 15 min =============================== -->
+        <section data-act="Intervalo">
+          <section class="slide--break" data-chrome="hidden">
+            <p class="eyebrow">Intervalo · voltamos às 20:45</p>
+            <div class="countdown" data-minutes="15"></div>
+            <p class="muted">Para conversar no café: quantos de vocês já precisaram de uma declaração para estágio com prazo apertado?</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 15 min (20:30–20:45).</p></aside>
+          </section>
+        </section>
+
+        <!-- =============================== CAPÍTULO 4 · 25 min =============================== -->
+        <section data-act="Cap. 4 · O tamanho do problema">
+          <section class="slide--section" data-chrome="hidden">
+            <p class="eyebrow">Capítulo 4 · retoma os Atos 1.5 e 1.6</p>
+            <span class="section-number">04</span>
+            <h1>O tamanho do problema</h1>
+            <p class="section-question">Qual problema é real?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Capítulo 4, 25 min (20:45–21:10): dados da sala 3 · 5 dimensões 8 · conta ao vivo 5 · frase-problema 5 · hipótese 4.</p>
+              <p><strong>Base do Dia 1:</strong> métricas de discovery (1.5), hipótese como assert (1.6).</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 1 · Mãos levantadas</span>
+            <p class="question">Quem precisou de declaração no último ano?</p>
+            <p class="muted fragment fade-up">Para estágio? Quem foi à secretaria só para perguntar se estava pronta?</p>
+            <aside class="notes"><p>Conte as mãos e diga os números em voz alta: é dado real, coletado ali. Eles entram no Alcance. <strong>Tempo:</strong> 3 min.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 2 · As 5 dimensões, com a sala</p>
+            <h2>O problema em cinco dimensões</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Dimensão</th><th>No case Campus+</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fragment"><td>Alcance</td><td>1.400 pedidos de declaração por mês, mais os números da sala</td></tr>
+                <tr class="fragment"><td>Frequência</td><td>Picos no início do semestre e nas temporadas de estágio</td></tr>
+                <tr class="fragment"><td>Intensidade</td><td>40% esperam mais de 3 dias; risco de perder a vaga de estágio</td></tr>
+                <tr class="fragment"><td>Alternativa atual</td><td>Ir à secretaria, insistir por e-mail, pedir a um conhecido</td></tr>
+                <tr class="fragment"><td>Disposição</td><td>Alunos já gastam deslocamento e até 40 minutos de fila</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes"><p>Pergunte dimensão por dimensão; revele a resposta esperada depois que a sala falar. <strong>Tempo:</strong> 8 min.</p></aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 3 · A conta ao vivo</span>
+            <p class="question">Quantas horas por mês a secretaria gasta só com declaração e status?</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 5 min.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 3 · A conta ao vivo</p>
+            <h2>280 horas por mês só com declaração e status</h2>
+            <div class="formula">
+              <div class="formula__term"><span class="formula__value">1.680</span><span class="formula__label">atendimentos por mês (declaração + status)</span></div>
+              <span class="formula__op">×</span>
+              <div class="formula__term"><span class="formula__value">10 min</span><span class="formula__label">por atendimento</span></div>
+              <span class="formula__op">=</span>
+              <div class="formula__term"><span class="formula__value">16.800 min</span><span class="formula__label">por mês</span></div>
+              <span class="formula__op">=</span>
+              <div class="formula__term formula__term--result"><span class="formula__value">280 h</span><span class="formula__label">por mês</span></div>
+            </div>
+            <p class="wide mt-6 fragment fade-up">Quantas pessoas em tempo integral isso dá?</p>
+            <p class="callout fragment fade-up">Quase duas pessoas da secretaria só para isso.</p>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 4 · A frase-problema, escrita pela sala</p>
+            <h2>A frase-problema</h2>
+            <p class="template template--long"><span class="slot">Alunos que precisam comprovar matrícula</span>, principalmente para estágio, esperam <span class="slot">até mais de 3 dias</span> pela declaração sem saber o status. Os <span class="slot">1.400 pedidos por mês</span> geram cerca de <span class="slot">1.680 atendimentos</span> na secretaria, ou 280 horas mensais. Hoje resolvem <span class="slot">indo à secretaria ou insistindo por e-mail</span>.</p>
+            <aside class="notes"><p>Versão esperada. Deixe a sala escrever em voz alta primeiro; se ela chegar a outra versão bem argumentada, siga com ela. <strong>Tempo:</strong> 5 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 5 · A hipótese</p>
+            <h2>O assert do Campus+</h2>
+            <p class="template template--long">Acreditamos que <span class="slot">alunos que precisam de declaração para estágio</span> perdem tempo e prazos porque <span class="slot">a emissão é lenta e sem status</span>. Saberemos que estamos certos se <span class="slot">os atendimentos sobre declaração e status</span> caírem <span class="slot">pela metade em 2 meses</span>.</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 4 min com o debate.</p></aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Debate</span>
+            <p class="question">Metade é ambicioso ou tímido? Por quê?</p>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Fica no case · Capítulo 4</p>
+            <h2>O tamanho do problema e a hipótese</h2>
+            <div class="grid-2x2">
+              <div class="card"><h3>1.400 pedidos por mês</h3><p class="small">De declaração de matrícula, com picos no início do semestre</p></div>
+              <div class="card"><h3>280 horas por mês</h3><p class="small">Da secretaria, só com declaração e status: quase duas pessoas</p></div>
+              <div class="card"><h3>Frase-problema</h3><p class="small">Quem precisa comprovar matrícula espera até mais de 3 dias, sem saber o status</p></div>
+              <div class="card"><h3>Hipótese</h3><p class="small">Atendimentos de declaração e status caem pela metade em 2 meses</p></div>
+            </div>
+          </section>
+        </section>
+
+        <!-- =============================== CAPÍTULO 5 · 30 min =============================== -->
+        <section data-act="Cap. 5 · Explorar soluções">
+          <section class="slide--section" data-chrome="hidden">
+            <p class="eyebrow">Capítulo 5 · retoma o Ato 2</p>
+            <span class="section-number">05</span>
+            <h1>Explorar soluções</h1>
+            <p class="section-question">A primeira solução raramente é a melhor</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Capítulo 5, 30 min (21:10–21:40): chuva de soluções 8 · quatro riscos 12 · menor teste 10.</p>
+              <p><strong>Base do Dia 1:</strong> pelo menos três soluções, os quatro riscos e o menor teste (Ato 2).</p>
+              <p><strong>Se atrasar 10 min:</strong> chuva de soluções em 5 min e pule a alternativa "declaração para todos".</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 1 · Chuva de soluções</span>
+            <p class="question">Quantas formas diferentes existem de resolver isso?</p>
+            <p class="muted">Regra: pelo menos uma sem software.</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 8 min. Se não surgirem, sugira você (próximo slide).</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 1 · Chuva de soluções</p>
+            <h2>Cinco formas de resolver</h2>
+            <ol>
+              <li class="fragment fade-up">Chatbot com IA (a demanda original)</li>
+              <li class="fragment fade-up">Tela de status do pedido com notificação</li>
+              <li class="fragment fade-up">Declaração gerada na hora no app, com QR de autenticidade</li>
+              <li class="fragment fade-up">Balcão expresso só para declarações (sem software)</li>
+              <li class="fragment fade-up">Enviar a declaração automaticamente a todos no início do semestre</li>
+            </ol>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 2 · Os quatro riscos</span>
+            <p class="question">De 1 a 3: vão usar? Conseguem usar? Dá para construir? Vale a pena?</p>
+            <aside class="notes"><p>A sala dá as notas e você fala o total em voz alta. <strong>Tempo:</strong> 12 min.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Notas ilustrativas</span>
+            <p class="eyebrow">Passo 2 · Uma leitura possível</p>
+            <h2>Dois empates no topo</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Alternativa</th><th class="num">Vão usar?</th><th class="num">Conseguem usar?</th><th class="num">Dá para construir?</th><th class="num">Vale a pena?</th><th class="num">Total</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Chatbot com IA</td><td class="num">2</td><td class="num">2</td><td class="num">1</td><td class="num">2</td><td class="num">7</td></tr>
+                <tr class="fragment custom mark"><td>Status + notificação</td><td class="num">3</td><td class="num">3</td><td class="num">3</td><td class="num">2</td><td class="num">11</td></tr>
+                <tr class="fragment custom mark"><td>Declaração na hora com QR</td><td class="num">3</td><td class="num">3</td><td class="num">2</td><td class="num">3</td><td class="num">11</td></tr>
+                <tr><td>Balcão expresso</td><td class="num">2</td><td class="num">3</td><td class="num">3</td><td class="num">1</td><td class="num">9</td></tr>
+                <tr><td>Declaração para todos no início</td><td class="num">1</td><td class="num">3</td><td class="num">3</td><td class="num">2</td><td class="num">9</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes"><p>Leitura possível, não gabarito. Compare com as notas que a sala deu. O empate é proposital e gera o melhor debate.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O status resolve a ansiedade. A declaração na hora elimina a <em>espera</em>, e com ela a necessidade de status.</p>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">A voz do dev · dá para construir?</span>
+            <p class="question">Os dados da declaração já existem no sistema acadêmico? Como uma empresa confia num PDF?</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 2 · O que o sistema acadêmico já tem</p>
+            <h2>A carta F</h2>
+            <div class="cards-reveal">
+              <div class="context-card">
+                <span class="context-card__letter">F</span>
+                <span class="context-card__trigger">“Os dados já existem?”</span>
+                <p class="context-card__body">O sistema acadêmico tem uma API de leitura. Hoje a secretaria copia os dados dele para um modelo de documento de texto.</p>
+              </div>
+              <div class="context-card fragment fade-up">
+                <span class="context-card__trigger">O que a sala percebe</span>
+                <p class="context-card__body">O trabalho da secretaria é copiar e colar.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 3 · O menor teste</span>
+            <p class="question">Antes de dois meses de desenvolvimento, qual o teste mais barato que responde se isso funciona?</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 10 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 3 · O menor teste</p>
+            <h2>Dois testes que cabem em duas semanas</h2>
+            <div class="split">
+              <div class="split__col fragment fade-up">
+                <span class="split__label">Mágico de Oz</span>
+                <p>Um botão “Gerar declaração” no Campus+, só para o curso de ADS, por duas semanas. Por trás, a secretaria emite manualmente em até 1 hora e envia</p>
+              </div>
+              <div class="split__col fragment fade-up">
+                <span class="split__label">Discovery sem código</span>
+                <p>Ligar para 5 empresas que contratam estagiários e perguntar se aceitam declaração com QR de autenticidade</p>
+              </div>
+            </div>
+            <aside class="notes"><p>Respostas esperadas. Revele depois que a sala propuser.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Carta G · resultado do piloto (D+14, 800 alunos de ADS)</p>
+            <h2>O piloto cortou 72% dos atendimentos do curso</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Resultado do piloto</th><th class="num">Valor</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Pedidos pelo botão</td><td class="num">140</td></tr>
+                <tr><td>Entregues em até 1 hora</td><td class="num">95%</td></tr>
+                <tr class="is-highlight"><td>Atendimentos de declaração e status do curso</td><td class="num">de 64 para 18 (−72%)</td></tr>
+                <tr><td>Empresas que aceitariam o QR</td><td class="num">5 de 5</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O piloto não tinha uma linha de código de geração de PDF. Tinha um botão e uma <em>pessoa</em>.</p>
+            <aside class="notes"><p><strong>Fala-guia:</strong> "O piloto não tinha uma linha de código de geração de PDF. Tinha um botão e uma pessoa. E respondeu a pergunta mais cara."</p></aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Debate</span>
+            <p class="question">O chatbot morreu?</p>
+            <p class="muted fragment fade-up">Não. Os dados mostram por onde começar.</p>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Fica no case · Capítulo 5</p>
+            <h2>Soluções, riscos e o menor teste</h2>
+            <div class="grid-2x2">
+              <div class="card"><h3>Cinco alternativas</h3><p class="small">Pelo menos uma sem software: o balcão expresso</p></div>
+              <div class="card"><h3>Empate nos riscos</h3><p class="small">Status + notificação e declaração na hora com QR: 11 pontos cada</p></div>
+              <div class="card"><h3>O menor teste</h3><p class="small">Mágico de Oz: botão só para ADS, emissão manual em até 1 hora</p></div>
+              <div class="card"><h3>O resultado do piloto</h3><p class="small">−72% nos atendimentos do curso; 5 de 5 empresas aceitariam o QR</p></div>
+            </div>
+          </section>
+        </section>
+
+        <!-- =============================== CAPÍTULO 6 · 30 min =============================== -->
+        <section data-act="Cap. 6 · Métricas e árvore">
+          <section class="slide--section" data-chrome="hidden">
+            <p class="eyebrow">Capítulo 6 · retoma o Ato 4</p>
+            <span class="section-number">06</span>
+            <h1>Métricas e árvore</h1>
+            <p class="section-question">Como vou saber se funcionou?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Capítulo 6, 30 min (21:40–22:10): armadilha 4 · três andares 3 · funil do piloto 5 · árvore 10 · eventos 5 · métricas finais 3.</p>
+              <p><strong>Base do Dia 1:</strong> os três andares, árvore de métricas, ler dados, armadilhas e eventos (Ato 4).</p>
+              <p><strong>Se atrasar 20 min:</strong> pule o funil do piloto e vá direto para a árvore.</p>
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 1 · A armadilha · carta H</p>
+            <h2>A reitoria comemora</h2>
+            <div class="message">
+              <div class="message__meta"><span>De: reitoria</span><span>Assunto: marca histórica!</span></div>
+              <p class="message__body">O Campus+ passou de 10 mil downloads!</p>
+            </div>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Pergunta para a sala</span>
+            <p class="question">É uma boa notícia?</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 4 min com a resposta.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 1 · Métrica de vaidade</p>
+            <h2>Só 35% dos alunos usam o app no mês</h2>
+            <div class="kpis">
+              <div><span class="kpi__value">10.500</span><span class="kpi__label">downloads do app</span></div>
+              <div class="fragment fade-up"><span class="kpi__value kpi__value--critical">4.200</span><span class="kpi__label">usuários ativos no mês, 35% dos alunos</span></div>
+            </div>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 2 · Os três andares no Campus+</p>
+            <h2>Cada métrica do case no seu andar</h2>
+            <div class="floors">
+              <div class="floor fragment fade-up" data-fragment-index="3"><span class="floor__name">Negócio</span><span class="floor__items">Horas da secretaria com declaração e status · atendimentos por motivo</span></div>
+              <div class="floor fragment fade-up" data-fragment-index="2"><span class="floor__name">Produto</span><span class="floor__items">% dos pedidos feitos pelo app · % de declarações emitidas em até 5 minutos · funil do botão</span></div>
+              <div class="floor fragment fade-up" data-fragment-index="1"><span class="floor__name">Técnico</span><span class="floor__items">Tempo de resposta da API acadêmica · falha na geração do PDF · disponibilidade da validação do QR</span></div>
+            </div>
+            <aside class="notes"><p>A sala sugere métricas e você coloca no andar certo. Esta é uma leitura possível, com as métricas que aparecem no capítulo. <strong>Tempo:</strong> 3 min.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 3 · O funil do piloto</p>
+            <h2>Onde vocês investigariam?</h2>
+            <div class="funnel">
+              <div class="funnel__row"><span>Viram o botão “Gerar declaração”</span><div class="funnel__bar" style="width: 100%"></div><span class="funnel__value">520</span></div>
+              <div class="funnel__row"><span>Tocaram no botão</span><div class="funnel__bar" style="width: 30.8%"></div><span class="funnel__value">160</span></div>
+              <div class="funnel__row"><span>Confirmaram os dados</span><div class="funnel__bar" style="width: 26.9%"></div><span class="funnel__value">140</span></div>
+              <div class="funnel__row"><span>Receberam a declaração</span><div class="funnel__bar" style="width: 25.6%"></div><span class="funnel__value">133</span></div>
+              <div class="funnel__row"><span>Baixaram ou compartilharam</span><div class="funnel__bar" style="width: 24.6%"></div><span class="funnel__value">128</span></div>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> 5 min.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 3 · Duas leituras</p>
+            <h2>A maior queda: só 31% tocaram no botão</h2>
+            <div class="split">
+              <div class="split__col fragment fade-up">
+                <span class="split__label">Leitura 1</span>
+                <p>O botão está escondido</p>
+              </div>
+              <div class="split__col fragment fade-up">
+                <span class="split__label">Leitura 2</span>
+                <p>A maioria não precisava de declaração naquele dia</p>
+              </div>
+            </div>
+            <p class="wide mt-6 fragment fade-up">As duas são possíveis. Como vocês verificariam?</p>
+            <aside class="notes"><p>Debate esperado: a sala propõe como verificar.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 4 · A árvore, construída pela sala</p>
+            <h2>A árvore do Campus+</h2>
+            <svg class="diagram" viewBox="0 0 1664 660" role="img" aria-label="Árvore de métricas do Campus+: horas da secretaria, pedidos no balcão e contatos sobre status, canal do pedido e tempo até ficar pronta, e as folhas técnicas">
+              <text class="tier" x="0" y="22">NEGÓCIO</text>
+              <g class="node"><rect x="0" y="220" width="380" height="200" rx="16" /><text class="node__title" x="24" y="266">Horas da secretaria:</text><text class="node__title" x="24" y="302">declaração e status</text><text class="node__value" x="24" y="360">280 h/mês</text><text class="node__title" x="24" y="398">atendimentos × 10 min</text></g>
+              <g class="fragment" data-fragment-index="1">
+                <text class="tier" x="448" y="22">PRODUTO</text>
+                <path class="edge" d="M380 320 C414 320 414 165 448 165" />
+                <path class="edge" d="M380 320 C414 320 414 475 448 475" />
+                <g class="node"><rect x="448" y="100" width="380" height="130" rx="16" /><text class="node__title" x="472" y="146">Pedidos de declaração</text><text class="node__value" x="472" y="202">feitos no balcão</text></g>
+                <g class="node"><rect x="448" y="410" width="380" height="130" rx="16" /><text class="node__title" x="472" y="456">Contatos perguntando</text><text class="node__value" x="472" y="512">o status</text></g>
+              </g>
+              <g class="fragment" data-fragment-index="2">
+                <text class="tier" x="896" y="22">PRODUTO</text>
+                <path class="edge" d="M828 165 L896 165" />
+                <path class="edge is-highlight" d="M828 475 L896 475" />
+                <g class="node"><rect x="896" y="100" width="380" height="130" rx="16" /><text class="node__title" x="920" y="146">Canal do pedido</text><text class="node__value" x="920" y="202">% feitos pelo app</text></g>
+                <g class="node is-highlight"><rect x="896" y="410" width="380" height="130" rx="16" /><text class="node__title" x="920" y="456">Tempo até ficar pronta</text><text class="node__value" x="920" y="512">% em até 5 min</text></g>
+                <text class="caption" x="896" y="582">Métrica de sucesso · meta 95%</text>
+              </g>
+              <g class="fragment" data-fragment-index="3">
+                <text class="tier" x="1344" y="22">TÉCNICO</text>
+                <path class="edge" d="M1276 475 C1310 475 1310 248 1344 248" />
+                <path class="edge" d="M1276 475 C1310 475 1310 364 1344 364" />
+                <path class="edge" d="M1276 475 C1310 475 1310 480 1344 480" />
+                <path class="edge" d="M1276 475 C1310 475 1310 596 1344 596" />
+                <g class="node"><rect x="1344" y="200" width="320" height="96" rx="16" /><text class="node__text" x="1368" y="240">Tempo de resposta</text><text class="node__text" x="1368" y="276">da API acadêmica</text></g>
+                <g class="node"><rect x="1344" y="316" width="320" height="96" rx="16" /><text class="node__text" x="1368" y="356">Falha na geração</text><text class="node__text" x="1368" y="392">do PDF</text></g>
+                <g class="node"><rect x="1344" y="432" width="320" height="96" rx="16" /><text class="node__text" x="1368" y="472">Disponibilidade da</text><text class="node__text" x="1368" y="508">validação do QR</text></g>
+                <g class="node"><rect x="1344" y="548" width="320" height="96" rx="16" /><text class="node__text" x="1368" y="588">Dados cadastrais</text><text class="node__text" x="1368" y="624">desatualizados</text></g>
+              </g>
+            </svg>
+            <aside class="notes">
+              <p>Estrutura esperada, de cima para baixo, construída pela sala: raiz (negócio) = horas da secretaria com declaração e status (hoje, 280 h/mês). Galho 1: pedidos feitos no balcão ← % dos pedidos feitos pelo app. Galho 2: contatos perguntando o status ← tempo até a declaração ficar pronta ← % emitidas em até 5 minutos. Folhas técnicas: API, PDF, validação do QR e dados desatualizados (que geram declaração errada).</p>
+              <p>Pergunte cada nível antes de revelar. <strong>Tempo:</strong> 10 min com o lado do aluno e a projeção.</p>
+            </aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">Do lado do aluno: de <em>dias</em> para minutos, e a vaga de estágio garantida.</p>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 4 · Projeção ilustrativa</p>
+            <h2>Se o −72% do piloto se repetir na universidade inteira</h2>
+            <div class="formula">
+              <div class="formula__term"><span class="formula__value">1.680</span><span class="formula__label">atendimentos por mês</span></div>
+              <span class="formula__op">×</span>
+              <div class="formula__term"><span class="formula__value">72%</span><span class="formula__label">de redução</span></div>
+              <span class="formula__op">=</span>
+              <div class="formula__term"><span class="formula__value">≈ 1.210</span><span class="formula__label">atendimentos a menos por mês</span></div>
+              <span class="formula__op">→</span>
+              <div class="formula__term formula__term--result"><span class="formula__value">≈ 200 h</span><span class="formula__label">liberadas por mês</span></div>
+            </div>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Passo 5 · Eventos, como um dev</span>
+            <p class="question">Que eventos vocês instrumentariam? Nomes no padrão objeto_ação.</p>
+            <aside class="notes"><p><strong>Tempo:</strong> 5 min.</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Passo 5 · Plano de eventos</p>
+            <h2>Seis eventos, do botão à validação</h2>
+            <table class="data">
+              <thead>
+                <tr><th>Evento</th><th>Quando dispara</th><th>Propriedades</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><code>declaracao_botao_visto</code></td><td>O botão aparece na tela</td><td>curso</td></tr>
+                <tr><td><code>declaracao_solicitada</code></td><td>O aluno confirma o pedido</td><td>finalidade (estágio, transporte, outro)</td></tr>
+                <tr><td><code>declaracao_emitida</code></td><td>O PDF fica pronto</td><td>tempo_ms</td></tr>
+                <tr><td><code>declaracao_falhou</code></td><td>A geração dá erro</td><td>erro</td></tr>
+                <tr><td><code>declaracao_baixada</code></td><td>O aluno baixa ou compartilha</td><td>canal</td></tr>
+                <tr class="fragment custom mark"><td><code>declaracao_validada</code></td><td>Alguém lê o QR de autenticidade</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O último evento mede se as empresas usam a declaração. Só um <em>dev</em> pensaria em instrumentar.</p>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Passo 6 · As métricas finais</p>
+            <h2>Quatro métricas para acompanhar</h2>
+            <div class="grid-2x2">
+              <div class="card fragment fade-up"><span class="label">Sucesso</span><p class="small">% de declarações emitidas em até 5 minutos (meta: 95%)</p></div>
+              <div class="card fragment fade-up"><span class="label">Resultado</span><p class="small">Atendimentos de declaração e status −50% em 2 meses</p></div>
+              <div class="card fragment fade-up"><span class="label">Proteção</span><p class="small">% de declarações com dado incorreto (abaixo de 1%) e atendimentos de outros motivos sem subir</p></div>
+              <div class="card fragment fade-up"><span class="label">Acompanhamento</span><p class="small">D+1, D+7 e D+30</p></div>
+            </div>
+            <aside class="notes"><p><strong>Tempo:</strong> 3 min.</p></aside>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Fica no case · Capítulo 6</p>
+            <h2>Métricas, árvore e eventos</h2>
+            <div class="grid-2x2">
+              <div class="card"><h3>A armadilha</h3><p class="small">10.500 downloads, mas só 35% dos alunos ativos no mês</p></div>
+              <div class="card"><h3>A árvore</h3><p class="small">280 h/mês ← pedidos no balcão e contatos sobre status ← % pelo app e % em até 5 min</p></div>
+              <div class="card"><h3>Seis eventos</h3><p class="small">De <code>declaracao_botao_visto</code> a <code>declaracao_validada</code></p></div>
+              <div class="card"><h3>As métricas</h3><p class="small">95% em até 5 min · −50% em 2 meses · menos de 1% com dado incorreto</p></div>
+            </div>
+          </section>
+        </section>
+
+        <!-- =============================== CAPÍTULO 7 · 15 min =============================== -->
+        <section data-act="Cap. 7 · Defender a decisão">
+          <section class="slide--section" data-chrome="hidden">
+            <p class="eyebrow">Capítulo 7 · retoma o Ato 5</p>
+            <span class="section-number">07</span>
+            <h1>Defender a decisão</h1>
+            <p class="section-question">Como convenço quem decide?</p>
+            <aside class="notes">
+              <p><strong>Tempo:</strong> Capítulo 7, 15 min (22:10–22:25): situação 2 · três plateias 10 · a pergunta difícil 3.</p>
+              <p><strong>Base do Dia 1:</strong> três plateias e a estrutura do argumento (Ato 5).</p>
+            </aside>
+          </section>
+
+          <section class="slide--question" data-chrome="hidden">
+            <span class="question-label">Situação</span>
+            <p class="question">Como dizer à reitoria que o primeiro passo não é o chatbot, sem parecer que estão recusando?</p>
+            <aside class="notes"><p>Debate rápido, retomando as três atitudes do Ato 3.2 (próximo slide).</p></aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">De ontem · Ato 3.2</p>
+            <h2>Três atitudes para questionar sem travar</h2>
+            <ol>
+              <li>Curiosidade em vez de oposição</li>
+              <li>Pergunta antes de opinião</li>
+              <li>Alternativa junto com a dúvida</li>
+            </ol>
+          </section>
+
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">Para a reitoria · impacto, custo e risco</p>
+            <h2>Primeiro a declaração, depois o assistente</h2>
+            <table class="data">
+              <tbody>
+                <tr class="fragment"><td>Problema com número</td><td>56% dos atendimentos da secretaria são sobre declaração de matrícula e o status dela</td></tr>
+                <tr class="fragment"><td>Evidência</td><td>Num piloto de duas semanas com o curso de ADS, a emissão pelo app reduziu esses atendimentos em 72%</td></tr>
+                <tr class="fragment"><td>Impacto esperado</td><td>Na universidade toda, libera cerca de 200 horas da secretaria por mês e diminui a fila no início do semestre</td></tr>
+                <tr class="fragment"><td>Custo e risco</td><td>4 semanas de 2 devs. Risco: a validade do documento, mitigada com o QR de autenticidade, que as empresas consultadas aceitaram</td></tr>
+                <tr class="fragment"><td>Pedido</td><td>Liberar para todos os cursos neste semestre e medir em D+30</td></tr>
+                <tr class="fragment"><td>E a IA?</td><td>O assistente com IA entra depois, focado em boleto e notas, guiado pelos mesmos dados</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes">
+              <p>A sala escreve o argumento para três plateias (10 min). Versão esperada para a reitoria, com custos fictícios, na estrutura do Ato 5.</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Para os alunos · o problema deles, nas palavras deles</p>
+            <p class="quote">Precisa de declaração para o estágio? Gere no Campus+ em segundos, com QR que a empresa valida na hora.</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">Para o time técnico · viabilidade e esforço</p>
+            <h2>O que vamos construir</h2>
+            <ul>
+              <li class="fragment fade-up dim-past">Integração de leitura com o sistema acadêmico</li>
+              <li class="fragment fade-up dim-past">Geração de PDF com QR e uma página pública de validação</li>
+              <li class="fragment fade-up dim-past">Seis eventos instrumentados</li>
+            </ul>
+            <p class="callout fragment fade-up">Nenhuma escrita no sistema acadêmico.</p>
+          </section>
+
+          <section>
+            <p class="eyebrow">A pergunta difícil · carta I</p>
+            <h2>A reitoria responde</h2>
+            <div class="message">
+              <div class="message__meta"><span>De: reitoria</span></div>
+              <p class="message__body">Mas a outra universidade já tem IA. Não vamos ficar para trás?</p>
+            </div>
+            <p class="callout mt-5 fragment fade-up">Vamos usar IA onde ela resolve. Com a declaração resolvida, boleto e notas somam 30% dos atendimentos: ali um assistente pode ajudar.</p>
+            <aside class="notes"><p>Debate aberto antes de revelar a resposta esperada. <strong>Tempo:</strong> 3 min.</p></aside>
+          </section>
+
+          <section class="slide--statement" data-chrome="hidden">
+            <p class="statement">O argumento não diz “não”. Diz “<em>primeiro isto</em>, por causa disto, e depois aquilo”.</p>
+            <aside class="notes"><p><strong>Fala-guia:</strong> "Repare que o argumento não diz 'não'. Diz 'primeiro isto, por causa disto, e depois aquilo'."</p></aside>
+          </section>
+        </section>
+
+        <!-- =============================== ENCERRAMENTO · 5 min =============================== -->
+        <section data-act="Encerramento">
+          <section>
+            <span class="badge badge--ficticio data-stamp">Dados fictícios</span>
+            <p class="eyebrow">O case completo</p>
+            <h2>Do “chatbot” à “declaração na hora”</h2>
+            <ol class="chapters">
+              <li><span class="chapters__num">1 · A demanda</span><span class="chapters__name">A pergunta certa</span><span class="chapters__text">O chatbot é solução; a fila é sintoma</span></li>
+              <li><span class="chapters__num">2 · Discovery</span><span class="chapters__name">O que ouvimos</span><span class="chapters__text">Dores, gambiarras e a escada de evidência</span></li>
+              <li><span class="chapters__num">3 · Dados</span><span class="chapters__name">56% da fila</span><span class="chapters__text">É declaração e status, e o trabalho é a vaga de estágio</span></li>
+              <li><span class="chapters__num">4 · Tamanho</span><span class="chapters__name">280 h por mês</span><span class="chapters__text">Frase-problema e hipótese de −50%</span></li>
+              <li><span class="chapters__num">5 · Soluções</span><span class="chapters__name">Declaração na hora</span><span class="chapters__text">Piloto Mágico de Oz: −72%</span></li>
+              <li><span class="chapters__num">6 · Métricas</span><span class="chapters__name">95% em até 5 min</span><span class="chapters__text">Árvore, eventos e proteção</span></li>
+              <li><span class="chapters__num">7 · Argumento</span><span class="chapters__name">Primeiro isto</span><span class="chapters__text">Depois aquilo, guiado pelos mesmos dados</span></li>
+            </ol>
+            <aside class="notes">
+              <p><strong>Fala:</strong> "Esse é o caminho de um produto. Vocês percorreram em três horas."</p>
+              <p><strong>Tempo:</strong> Encerramento, 5 min (22:25–22:30).</p>
+            </aside>
+          </section>
+
+          <section>
+            <p class="eyebrow">Onde usar</p>
+            <h2>O método vai com vocês</h2>
+            <ul class="tags">
+              <li class="fragment fade-up">No próximo refinamento do estágio</li>
+              <li class="fragment fade-up">No TCC</li>
+              <li class="fragment fade-up">Numa entrevista: conte um projeto pelo problema, não pela stack</li>
+              <li class="fragment fade-up">No hackathon desta semana</li>
+            </ul>
+          </section>
+
+          <section data-chrome="hidden">
+            <p class="eyebrow">Obrigado!</p>
+            <h2>Todo o material está no repositório</h2>
+            <div class="qr-grid">
+              <div class="qr">
+                <div class="qr__code qr__code--png"><img src="../../assets/qrcodes/qr-theproductpath.png" alt="QR code para o The Product Path" /></div>
+                <span class="qr__label">The Product Path</span>
+                <span class="qr__hint">onproductpath.substack.com</span>
+              </div>
+              <div class="qr">
+                <div class="qr__code qr__code--png"><img src="../../assets/qrcodes/qr-vinanews.png" alt="QR code para o Vina News" /></div>
+                <span class="qr__label">Vina News</span>
+                <span class="qr__hint">vinanews.com.br</span>
+              </div>
+              <div class="qr">
+                <div class="qr__code qr__code--png"><img src="../../assets/qrcodes/qr-work-in-tech.png" alt="QR code para o repositório com todo o material" /></div>
+                <span class="qr__label">Slides, roteiros e o case</span>
+                <span class="qr__hint">github.com/guilhermenstorti/work-in-tech</span>
+              </div>
+            </div>
+            <aside class="notes"><p>O material deixado para a turma é o repositório: os slides dos dois dias, os roteiros e o case Campus+ completo.</p></aside>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <footer class="deck-footer" aria-hidden="true">
+      <span>Work in Tech 2026</span>
+      <span class="deck-footer__sep"></span>
+      <span class="deck-footer__deck">Dia 2 · Workshop</span>
+      <span class="deck-footer__sep"></span>
+      <span class="deck-footer__act"></span>
+    </footer>
+
+    <script type="module">
+      import { initDeck } from '../../src/js/deck.js';
+      initDeck({ label: 'Dia 2 · Workshop' });
+    </script>
+  </body>
+</html>

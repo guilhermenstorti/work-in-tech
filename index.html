@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Work in Tech 2026 · Painel</title>
+    <meta name="description" content="Painel local para abrir as apresentações do Work in Tech 2026." />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(900px 500px at 90% -10%, var(--bg-glow), transparent 60%),
+          var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+      }
+      main {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 72px 24px 96px;
+      }
+      .eyebrow {
+        margin: 0 0 16px;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-family: var(--font-display);
+        font-size: clamp(36px, 6vw, 56px);
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+      .lead {
+        max-width: 60ch;
+        margin: 0 0 48px;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--text-muted);
+      }
+      .decks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 16px;
+        margin-bottom: 48px;
+      }
+      .deck {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 28px;
+        border: 2px solid var(--border);
+        border-radius: 20px;
+        background: var(--surface);
+        color: inherit;
+        text-decoration: none;
+        transition: border-color 180ms, transform 180ms;
+      }
+      .deck:hover,
+      .deck:focus-visible {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        outline: none;
+      }
+      .deck__day {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+      }
+      .deck__title {
+        font-family: var(--font-display);
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+      .deck__meta {
+        font-size: 15px;
+        color: var(--text-muted);
+      }
+      h2 {
+        margin: 0 0 16px;
+        font-family: var(--font-display);
+        font-size: 20px;
+        font-weight: 600;
+      }
+      section + section {
+        margin-top: 40px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+      td {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+      td:first-child {
+        width: 120px;
+      }
+      kbd {
+        display: inline-block;
+        min-width: 20px;
+        padding: 3px 8px;
+        border: 1px solid var(--border-strong);
+        border-bottom-width: 2px;
+        border-radius: 6px;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        text-align: center;
+        color: var(--text);
+        background: var(--surface-2);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Work in Tech 2026 · UniCesumar</p>
+      <h1>Todos os testes passaram, mas o produto falhou</h1>
+      <p class="lead">Discovery e métricas de produto para quem constrói software. Tudo roda neste notebook, sem internet.</p>
+
+      <div class="decks">
+        <a class="deck" href="./apresentacoes/dia-1-palestra/index.html">
+          <span class="deck__day">Dia 1 · 26/10 · 19h00</span>
+          <span class="deck__title">Palestra</span>
+          <span class="deck__meta">Abertura, cinco atos e o convite para o workshop.</span>
+        </a>
+        <a class="deck" href="./apresentacoes/dia-2-workshop/index.html">
+          <span class="deck__day">Dia 2 · 27/10 · 19h00</span>
+          <span class="deck__title">Workshop Campus+</span>
+          <span class="deck__meta">Sete capítulos construídos com a turma, do pedido à decisão.</span>
+        </a>
+      </div>
+
+      <section>
+        <h2>Atalhos durante a apresentação</h2>
+        <table>
+          <tbody>
+            <tr><td><kbd>S</kbd></td><td>Abre a visão do apresentador (notas, próximo slide e cronômetro)</td></tr>
+            <tr><td><kbd>F</kbd></td><td>Tela cheia</td></tr>
+            <tr><td><kbd>O</kbd> / <kbd>Esc</kbd></td><td>Visão geral dos slides, agrupados por ato</td></tr>
+            <tr><td><kbd>B</kbd> / <kbd>.</kbd></td><td>Tela preta (pausa para a conversa)</td></tr>
+            <tr><td><kbd>G</kbd></td><td>Ir para o slide número…</td></tr>
+            <tr><td><kbd>Alt</kbd> + clique</td><td>Zoom em um ponto do slide</td></tr>
+            <tr><td><kbd>T</kbd></td><td>Alterna tema escuro/claro</td></tr>
+            <tr><td><kbd>?</kbd></td><td>Lista todos os atalhos</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script type="module">
+      import '@fontsource-variable/inter';
+      import '@fontsource-variable/space-grotesk';
+      import '@fontsource-variable/jetbrains-mono';
+      import './src/styles/tokens.css';
+
+      try {
+        const theme = localStorage.getItem('wit:theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
+  </body>
+</html>

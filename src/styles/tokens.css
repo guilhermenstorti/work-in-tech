@@ -1,0 +1,132 @@
+/* =========================================================================
+   Design tokens · Work in Tech 2026
+   Fonte da verdade: docs/padroes-interface-experiencia.md
+   Nenhuma cor, tamanho ou espaçamento deve ser escrito "solto" nos slides:
+   use sempre estes tokens.
+   ========================================================================= */
+
+:root {
+  /* ---------- Tipografia ---------- */
+  --font-display: 'Space Grotesk Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', Consolas, 'Courier New', monospace;
+
+  /* Escala em px para o canvas fixo de 1920 × 1080 (o reveal.js escala o todo). */
+  --fs-hero: 140px;      /* capa e frases de impacto curtas (até 6 palavras) */
+  --fs-statement: 96px;  /* slide de afirmação / pergunta aberta */
+  --fs-h1: 76px;         /* título de abertura de ato */
+  --fs-h2: 56px;         /* título de slide de conteúdo */
+  --fs-h3: 40px;         /* subtítulo, título de card */
+  --fs-body: 36px;       /* texto corrido e bullets */
+  --fs-small: 28px;      /* legendas, fontes, notas de rodapé (mínimo de leitura) */
+  --fs-label: 22px;      /* eyebrow e badges em mono maiúsculo (exceção controlada) */
+  --fs-kpi: 160px;       /* número de destaque */
+  --fs-code: 30px;       /* blocos de SQL e eventos */
+
+  --lh-tight: 1.05;
+  --lh-heading: 1.15;
+  --lh-body: 1.4;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --tracking-display: -0.025em;
+  --tracking-label: 0.12em;
+
+  /* ---------- Espaçamento (escala de 8) ---------- */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+
+  /* Área segura do slide */
+  --safe-x: 128px;
+  --safe-top: 112px;
+  --safe-bottom: 120px;
+  --grid-gap: 48px;
+
+  /* ---------- Forma ---------- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --border-width: 2px;
+
+  /* ---------- Movimento ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 180ms;
+  --dur-base: 320ms;
+}
+
+/* ---------- Tema escuro (padrão) ---------- */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #0e0b16;
+  --bg-glow: rgba(139, 92, 246, 0.16);
+  --surface: #17131f;
+  --surface-2: #211b2c;
+  --border: #2e2740;
+  --border-strong: #463c5e;
+
+  --text: #f5f3f7;          /* 17.7:1 sobre --bg */
+  --text-muted: #b9b2c5;    /*  9.5:1 */
+  --text-dim: #8e869c;      /*  5.6:1 — só textos de apoio grandes */
+
+  --accent: #a78bfa;        /*  7.2:1 */
+  --accent-strong: #8b5cf6;
+  --accent-soft: #2a2140;
+  --on-accent: #0e0b16;
+
+  --positive: #4ade80;
+  --positive-soft: #11291c;
+  --warning: #fbbf24;
+  --warning-soft: #2e2410;
+  --critical: #f87171;
+  --critical-soft: #331718;
+  --info: #7db4fa;
+  --info-soft: #14233a;
+
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 24px 48px -24px rgba(0, 0, 0, 0.6);
+  --code-bg: #120f1a;
+}
+
+/* ---------- Tema claro (alternativa para salas muito iluminadas) ---------- */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #faf9fb;
+  --bg-glow: rgba(109, 40, 217, 0.08);
+  --surface: #ffffff;
+  --surface-2: #f2eff6;
+  --border: #e4e0ea;
+  --border-strong: #cbc4d6;
+
+  --text: #16121e;          /* 17.6:1 */
+  --text-muted: #4a4357;    /*  9.0:1 */
+  --text-dim: #6b6380;      /*  5.4:1 */
+
+  --accent: #6d28d9;        /*  6.8:1 */
+  --accent-strong: #5b21b6;
+  --accent-soft: #ede7fb;
+  --on-accent: #ffffff;
+
+  --positive: #166534;
+  --positive-soft: #e3f4e8;
+  --warning: #92400e;
+  --warning-soft: #fbf0dc;
+  --critical: #b91c1c;
+  --critical-soft: #fbe7e7;
+  --info: #1d4ed8;
+  --info-soft: #e5edfc;
+
+  --shadow-card: 0 1px 2px rgba(22, 18, 30, 0.06), 0 16px 40px -24px rgba(22, 18, 30, 0.25);
+  --code-bg: #f5f3f8;
+}
